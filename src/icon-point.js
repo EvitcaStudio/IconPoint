@@ -1,6 +1,3 @@
-/**
-* @export
-*/ 
 class IconPoint {
 	constructor(pOwner, pSettings) {
 		// The position of the icon point
