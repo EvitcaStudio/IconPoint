@@ -89,5 +89,3 @@ class IconPoint {
 		return this._position;
 	}
 }
-
-export { IconPoint };
