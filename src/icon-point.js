@@ -36,7 +36,7 @@ class IconPoint {
 		}
 	}
 	/**
-	 * @description Gets the new point's position after taking pAngle into account
+	 * @description Gets the new point's position inside a rectangle after taking pAngle into account
 	 * 
 	 * @param {number} pAngle - Angle in radians
 	 * @param {object} pAnchor - The center point of the icon
@@ -77,8 +77,8 @@ class IconPoint {
 			this.rawPixelsPoint.x = parseInt(pPoint.x);
 			this.rawPixelsPoint.y = parseInt(pPoint.y);
 		} else {
-			this.rawPixelsPoint.x = parseInt(pPoint.x * this.iconSize.width);
-			this.rawPixelsPoint.y = parseInt(pPoint.y * this.iconSize.height);
+			this.rawPixelsPoint.x = Math.max(parseInt(pPoint.x * this.iconSize.width), 1);
+			this.rawPixelsPoint.y = Math.max(parseInt(pPoint.y * this.iconSize.height), 1);
 		}
 	}
 }
