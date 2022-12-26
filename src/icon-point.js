@@ -1,8 +1,10 @@
 class IconPoint {
+	/**
+	 * 
+	 * @param {object} pOwner The owner of this icon point  
+	 * @param {object} pSettings The settings that this icon point will use  
+	 */
 	constructor(pOwner, pSettings) {
-		// The position of the icon point
-		this._x = this._y = 0;
-		this._position = { x: 0, y: 0 };
 		// The iconSize of the icon this point exists in
 		this.iconSize = { width: 32, height: 32 };
 		// The rawPixels point
@@ -33,14 +35,19 @@ class IconPoint {
 			}
 		}
 	}
-
-	setPointRotated() {
+	/**
+	 * @description Gets the new point's position after taking pAngle into account
+	 * 
+	 * @param {number} pAngle - Angle in radians
+	 * @param {object} pAnchor - The center point of the icon
+	 */
+	getPointRotated(pAngle, pAnchor = { x: 0.5, y: 0.5 }) {
 		// cx, cy - center of square coordinates
 		// x, y - coordinates of a corner point of the square
 		// theta is the angle of rotation
 
-		const cx = (this.owner.x + this.owner.xIconOffset) + (this.iconSize.width * this.owner.anchor.x);
-		const cy = (this.owner.y + this.owner.yIconOffset) + (this.iconSize.height * this.owner.anchor.y);
+		const cx = (this.owner.x + this.owner.xIconOffset) + (this.iconSize.width * pAnchor.x);
+		const cy = (this.owner.y + this.owner.yIconOffset) + (this.iconSize.height * pAnchor.y);
 
 		// We take away 1 from the position of the owner because we don't want to point to start inside the bounds, so to use true coordinates of 1-iconSize for the point, we must start outside of the bounds.
 		// Otherwise we would have to use 0-iconSize-1 for the points coordinates
@@ -51,19 +58,20 @@ class IconPoint {
 		const tempY = point.y - cy;
 
 		// now apply rotation
-		const rotatedX = tempX*Math.cos(this.owner.angle) - tempY*(-Math.sin(this.owner.angle));
-		const rotatedY = tempX*(-Math.sin(this.owner.angle)) + tempY*Math.cos(this.owner.angle);
+		const rotatedX = tempX*Math.cos(pAngle) - tempY*(-Math.sin(pAngle));
+		const rotatedY = tempX*(-Math.sin(pAngle)) + tempY*Math.cos(pAngle);
 
 		// translate back
 		const x = rotatedX + cx;
 		const y = rotatedY + cy;
-
-		this._x = x;
-		this._y = y;
-		this._position.x = x;
-		this._position.y = y;
+		return { x: x, y: y };
 	}
-
+	/**
+	 * @description Sets the static point and defines the raw pixels value
+	 * 
+	 * @param {object} pPoint - The static point in the icon
+	 * @param {boolean} pUseRawPixels - Whether or not this point is defined in raw pixels
+	 */
 	setPoint(pPoint, pUseRawPixels) {
 		if (pUseRawPixels) {
 			this.rawPixelsPoint.x = parseInt(pPoint.x);
@@ -72,20 +80,5 @@ class IconPoint {
 			this.rawPixelsPoint.x = parseInt(pPoint.x * this.iconSize.width);
 			this.rawPixelsPoint.y = parseInt(pPoint.y * this.iconSize.height);
 		}
-	}
-
-	get x() {
-		this.setPointRotated();
-		return this._x;
-	}
-
-	get y() {
-		this.setPointRotated();
-		return this._y;
-	}
-
-	get position() {
-		this.setPointRotated();
-		return this._position;
 	}
 }
