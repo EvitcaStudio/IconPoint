@@ -1,7 +1,7 @@
 /** 
  * @file A point that exists inside/outside a virtual rectangle. The point's position inside/outside of the rectangle is maintained when the rectangle is rotated. 
  * 
- * @version 1.1.0
+ * @version 1.2.0
  * @author doubleactii
  * @copyright
  * @license
