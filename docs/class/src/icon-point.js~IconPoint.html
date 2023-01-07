@@ -8,11 +8,11 @@
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
   <script src="script/manual.js"></script>
-<meta name="description" content="A point that exists inside/outside a virtual rectangle. The point&apos;s position inside/outside of the rectangle is maintained when the rectangle is rotated."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="IconPoint"><meta property="twitter:description" content="A point that exists inside/outside a virtual rectangle. The point&apos;s position inside/outside of the rectangle is maintained when the rectangle is rotated."><meta property="twitter:image" content="https://avatars.githubusercontent.com/u/56242467?v=4"></head>
+<meta name="description" content="A point that exists inside/outside a virtual rectangle. The point&apos;s position inside/outside of the rectangle is maintained when the rectangle is rotated."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="IconPoint"><meta property="twitter:description" content="A point that exists inside/outside a virtual rectangle. The point&apos;s position inside/outside of the rectangle is maintained when the rectangle is rotated."><meta property="twitter:image" content="./evitcastudio_round_branding.png"></head>
 <body class="layout-container" data-ice="rootContainer">
 
 <header>
-  <a href="./">Home</a>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
   
   <a href="identifiers.html">Reference</a>
   <a href="source.html">Source</a>
@@ -569,7 +569,7 @@ const tlPoint = new IconPoint(rectangle, rectangleSize, point);</code></pre>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/icon-point.js.html#lineNumber146">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/icon-point.js.html#lineNumber144">source</a></span></span>
     </span>
   </h3>
 
@@ -668,12 +668,10 @@ rectangle.x += 100;
 // Verify the point is where it should be after the rectangle changes positions
 console.log(tlPoint.getPoint()) // { x: 100, y: 0 } This shows that the point has moved to the updated position of the rectangle
 
-
 // Applying some offsets to the rectangle
 const rectangleOffsets = { x: 25, y: 25 };  
 // Verify the point is where it should be after offsets have been applied to the rectangle
 console.log(tlPoint.getPoint(undefined, rectangleOffsets)) // { x: 125, y: 25 } This shows that the point has moved to the updated posiiton based on the offsets of the rectangle
-
 
 // Applying some rotation to the rectangle
 const theta = Math.PI;
@@ -701,7 +699,7 @@ console.log(tlPoint.getPoint(theta)) // {x: 200, y: 50.00000000000001} This show
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/icon-point.js.html#lineNumber174">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/icon-point.js.html#lineNumber172">source</a></span></span>
     </span>
   </h3>
 
