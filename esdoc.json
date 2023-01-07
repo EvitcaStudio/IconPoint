@@ -1,0 +1,27 @@
+{
+  "source": "./src",
+  "destination": "./docs",
+  "includes": ["\\.js$"],
+  "index": "./README.md",
+  "excludes": [],
+  "plugins": [
+  {
+    "name": "esdoc-standard-plugin",
+    "option": {
+      "lint": {"enable": false},
+      "coverage": {"enable": false},
+      "accessor": {"access": ["public", "protected", "private"], "autoPrivate": true},
+      "undocumentIdentifier": {"enable": true},
+      "unexportedIdentifier": {"enable": true},
+      "typeInference": {"enable": true},
+      "brand": {
+        "logo": "",
+        "title": "IconPoint",
+        "description": "A point that exists inside/outside a virtual rectangle. The point's position inside/outside of the rectangle is maintained when the rectangle is rotated.",
+        "repository": "https://github.com/EvitcaStudio/IconPoint",
+        "author": "https://github.com/doubleactii",
+        "image": "https://avatars.githubusercontent.com/u/56242467?v=4"
+      }
+    }
+  }] 
+}

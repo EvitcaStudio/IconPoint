@@ -1,5 +1,42 @@
-/** 
- * @file A point that exists inside/outside a virtual rectangle. The point's position inside/outside of the rectangle is maintained when the rectangle is rotated. 
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/icon-point.js | IconPoint</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="A point that exists inside/outside a virtual rectangle. The point&apos;s position inside/outside of the rectangle is maintained when the rectangle is rotated."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="IconPoint"><meta property="twitter:description" content="A point that exists inside/outside a virtual rectangle. The point&apos;s position inside/outside of the rectangle is maintained when the rectangle is rotated."><meta property="twitter:image" content="https://avatars.githubusercontent.com/u/56242467?v=4"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/EvitcaStudio/IconPoint"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/icon-point.js~IconPoint.html">IconPoint</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/icon-point.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/** 
+ * @file A point that exists inside/outside a virtual rectangle. The point&apos;s position inside/outside of the rectangle is maintained when the rectangle is rotated. 
  * 
  * @version 1.1.0
  * @author doubleactii
@@ -9,7 +46,7 @@
  * Copyright (c) 2022 Evitca Studio
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
+ * of this software and associated documentation files (the &quot;Software&quot;), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
@@ -17,10 +54,10 @@
  * 
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * This software cannot be sold by itself. It must be used in a project and the project itself can be sold. In the case it is not, you the "user" of this software are breaking the license and agreeing to forfeit its usage.
- * Neither the name “EvitcaStudio” or "IconPoint" nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+ * This software cannot be sold by itself. It must be used in a project and the project itself can be sold. In the case it is not, you the &quot;user&quot; of this software are breaking the license and agreeing to forfeit its usage.
+ * Neither the name &#x201C;EvitcaStudio&#x201D; or &quot;IconPoint&quot; nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
  * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
@@ -30,8 +67,8 @@
  */
 /**
  * The IconPoint class  
- * A point that exists inside/outside a virtual rectangle. The point's position inside/outside of the rectangle is maintained when the rectangle is rotated.
- * @example <caption>Example usage of this class</caption>
+ * A point that exists inside/outside a virtual rectangle. The point&apos;s position inside/outside of the rectangle is maintained when the rectangle is rotated.
+ * @example &lt;caption&gt;Example usage of this class&lt;/caption&gt;
  * // Create a rectangle at the position of (0,0)
  * const rectangle = { x: 0, y: 0 };
  * // Make the dimensions of the rectangle 100x50
@@ -84,34 +121,34 @@ globalThis.IconPoint = class {
 		 */
 		this.rectangleSize = { width: 32, height: 32 };
 		// Check if the rectangle is a valid type
-		if (typeof(pRectanglePosition) === 'object' && typeof(pRectangleSize) === 'object' && pRectangleSize.constructor === Object) {
+		if (typeof(pRectanglePosition) === &apos;object&apos; &amp;&amp; typeof(pRectangleSize) === &apos;object&apos; &amp;&amp; pRectangleSize.constructor === Object) {
 			// Check if the rectangle has valid properties (x,y,width,height)
-			if (typeof(pRectanglePosition.x) === 'number' && typeof(pRectanglePosition.y) === 'number' && typeof(pRectangleSize.width) === 'number' && typeof(pRectangleSize.height) === 'number') {
+			if (typeof(pRectanglePosition.x) === &apos;number&apos; &amp;&amp; typeof(pRectanglePosition.y) === &apos;number&apos; &amp;&amp; typeof(pRectangleSize.width) === &apos;number&apos; &amp;&amp; typeof(pRectangleSize.height) === &apos;number&apos;) {
 				this.rectangle = pRectanglePosition;
 				this.rectangleSize.width = pRectangleSize.width;
 				this.rectangleSize.height = pRectangleSize.height;
 			} else {
-				console.error('Invalid properties on pRectanglePosition or pRectangleSize!');
+				console.error(&apos;Invalid properties on pRectanglePosition or pRectangleSize!&apos;);
 			}
 		}
 		// Check if the point is a valid type
-		if (typeof(pPoint) === 'object' && pPoint.constructor === Object) {
+		if (typeof(pPoint) === &apos;object&apos; &amp;&amp; pPoint.constructor === Object) {
 			// Check if the point has valid properties
-			if (typeof(pPoint.x) === 'number' && typeof(pPoint.y) === 'number') {
+			if (typeof(pPoint.x) === &apos;number&apos; &amp;&amp; typeof(pPoint.y) === &apos;number&apos;) {
 				this.setPoint(pPoint);	
 			} else {
-				console.error('Parameter of wrong type: pPoint.point.x or pPoint.point.y is not a number!');
+				console.error(&apos;Parameter of wrong type: pPoint.point.x or pPoint.point.y is not a number!&apos;);
 			}
 		}
 	}
 	/**
-	 * @description Gets the new point's position inside a rectangle after taking pTheta into account
+	 * @description Gets the new point&apos;s position inside a rectangle after taking pTheta into account
 	 * 
 	 * @param {number} [pTheta=0] - Rotation of the rectangle this point exists inside/outside of in radians
 	 * @param {object} [pOffset={ x: 0, y: 0 }] - The offset of the rectangle
 	 * @param {number} pOffset.x - The x offset of the rectangle
 	 * @param {number} pOffset.y - The y offset of the rectangle
-	 * @example <caption>Example usage of this method</caption>
+	 * @example &lt;caption&gt;Example usage of this method&lt;/caption&gt;
 	 * // Create a rectangle at the position of (0,0)
 	 * const rectangle = { x: 0, y: 0 };
 	 * // Make the dimensions of the rectangle 100x50
@@ -149,7 +186,7 @@ globalThis.IconPoint = class {
 		// theta is the angle of rotation
 		const cx = (this.rectangle.x + pOffset.x) + (this.rectangleSize.width / 2);
 		const cy = (this.rectangle.y + pOffset.y) + (this.rectangleSize.height / 2);
-		// We take away 1 from the position of the rectangle because we don't want to point to start inside the boundaries of the rectangle
+		// We take away 1 from the position of the rectangle because we don&apos;t want to point to start inside the boundaries of the rectangle
 		// Otherwise we would have to use 0 to (rectangle.xy-1) for the points coordinates
 		const point = { x: (this.rectangle.x + pOffset.x - 1) + this.rawPixelsPoint.x, y: (this.rectangle.y + pOffset.y - 1) + this.rawPixelsPoint.y };
 		// translate point to origin
@@ -176,3 +213,20 @@ globalThis.IconPoint = class {
 		this.rawPixelsPoint.y = pPoint.useRawPixels ? parseInt(pPoint.y) : Math.max(parseInt(pPoint.y * this.rectangleSize.height), 1);
 	}
 }
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
