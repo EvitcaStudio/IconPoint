@@ -1,66 +1,124 @@
-class IconPoint {
+/** 
+ * @file A point that exists inside/outside a virtual rectangle. The point's position inside/outside of the rectangle is maintained when the rectangle is rotated. 
+ * 
+ * @version 1.1.0
+ * @author doubleactii
+ * @copyright
+ * @license
+ * IconPoint is free software, available under the terms of a MIT style License.
+ * Copyright (c) 2022 Evitca Studio
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ * This software cannot be sold by itself. It must be used in a project and the project itself can be sold. In the case it is not, you the "user" of this software are breaking the license and agreeing to forfeit its usage.
+ * Neither the name “EvitcaStudio” or "IconPoint" nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+globalThis.IconPoint = class {
 	/**
 	 * 
-	 * @param {object} pOwner The owner of this icon point  
-	 * @param {object} pSettings The settings that this icon point will use  
+	 * @param {object} pRectanglePosition - The rectangle this icon point exists inside/outside of   
+	 * @param {number} pRectanglePosition.x - The x coordinate of the rectangle  
+	 * @param {number} pRectanglePosition.y - The y coordinate of the rectangle  
+	 * @param {object} pRectangleSize - The size of the rectangle  
+	 * @param {number} pRectangleSize.width - The width of the rectangle
+	 * @param {number} pRectangleSize.height - The height of the rectangle  
+	 * @param {object} pPoint - The point that exists inside/outside the rectangle  
+	 * @param {number} pPoint.x - The x coordinate of the point inside/outside the rectangle  
+	 * @param {number} pPoint.y - The y coordinate of the point inside/outside the rectangle  
+	 * @param {boolean} [pPoint.useRawPixels=false] - Whether or not this point is defined in raw pixels or in a normalized 0-1 range  
 	 */
-	constructor(pOwner, pSettings) {
-		// The iconSize of the icon this point exists in
-		this.iconSize = { width: 32, height: 32 };
-		// The rawPixels point
+	constructor(pRectanglePosition, pRectangleSize, pPoint) {
+		/**
+		 * An object storing the raw pixel position  
+		 * 
+		 * @private
+		 * @type {object} rawPixelsPoint - The object storing the raw pixel position of the point
+		 * @type {number} rawPixelsPoint.x - The raw x pixel position of this point
+		 * @type {number} rawPixelsPoint.y - The raw y pixel position of this point 
+		 */
 		this.rawPixelsPoint = { x: 0, y: 0 };
-		// The owner of this icon point
-		this.owner = pOwner;
-
-		// Check if pSettings is a valid type
-		if (pSettings && typeof(pSettings) === 'object' && pSettings.constructor === Object) {
-			// Check if the iconSize is a valid type
-			if (pSettings.iconSize && typeof(pSettings.iconSize) === 'object' && pSettings.iconSize.constructor === Object) {
-				// Check if the iconSize properties are of the valid type
-				if (typeof(pSettings.iconSize.width) === 'number' && typeof(pSettings.iconSize.height) === 'number') {
-					this.iconSize.width = parseInt(pSettings.iconSize.width);
-					this.iconSize.height = parseInt(pSettings.iconSize.height);
-				} else {
-					console.error('Parameter of wrong type: pSettings.iconSize.width or pSettings.iconSize.height is not a number!');
-				}
+		/**
+		 * An object storing the position of the rectangle  
+		 * 
+		 * @private
+		 * @type {object} rectangle - The object storing the position of the rectangle
+		 * @type {number} rectangle.x - The x position of the rectangle  
+		 * @type {number} rectangle.y - The y position of the rectangle  
+		 */
+		this.rectangle = null;
+		/**
+		 * An object storing the raw pixel position  
+		 * 
+		 * @private
+		 * @type {object} rectangleSize - The object storing the dimensions of the rectangle
+		 * @type {number} rectangleSize.width - The width of the rectangle  
+		 * @type {number} rectangleSize.height - The height of the rectangle  
+		 */
+		this.rectangleSize = { width: 32, height: 32 };
+		// Check if the rectangle is a valid type
+		if (typeof(pRectanglePosition) === 'object' && typeof(pRectangleSize) === 'object' && pRectangleSize.constructor === Object) {
+			// Check if the rectangle has valid properties (x,y,width,height)
+			if (typeof(pRectangleSize.width) === 'number' && typeof(pRectangleSize.height) === 'number' && typeof(pRectanglePosition.x) === 'number' && typeof(pRectanglePosition.y) === 'number') {
+				this.rectangle = pRectanglePosition;
+				this.rectangleSize.width = pRectangleSize.width;
+				this.rectangleSize.height = pRectangleSize.height;
+			} else {
+				console.error('Invalid properties on pRectanglePosition or pRectangleSize!');
 			}
-
-			// Check if the point is a valid type
-			if (pSettings.point && typeof(pSettings.point) === 'object' && pSettings.point.constructor === Object) {
-				if (typeof(pSettings.point.x) === 'number' && typeof(pSettings.point.y) === 'number') {
-					this.setPoint(pSettings.point, pSettings.useRawPixels);	
-				} else {
-					console.error('Parameter of wrong type: pSettings.point.x or pSettings.point.y is not a number!');
-				}
+		}
+		// Check if the point is a valid type
+		if (typeof(pPoint) === 'object' && pPoint.constructor === Object) {
+			// Check if the point has valid properties
+			if (typeof(pPoint.x) === 'number' && typeof(pPoint.y) === 'number') {
+				this.setPoint(pPoint);	
+			} else {
+				console.error('Parameter of wrong type: pPoint.point.x or pPoint.point.y is not a number!');
 			}
 		}
 	}
 	/**
-	 * @description Gets the new point's position inside a rectangle after taking pAngle into account
+	 * @description Gets the new point's position inside a rectangle after taking pTheta into account
 	 * 
-	 * @param {number} pAngle - Angle in radians
-	 * @param {object} pAnchor - The center point of the icon
+	 * @param {number} [pTheta=0] - Rotation of the rectangle this point exists inside/outside of in radians
+	 * @param {object} [pOffset={ x: 0, y: 0 }] - The offset of the rectangle
+	 * @param {number} pOffset.x - The x offset of the rectangle
+	 * @param {number} pOffset.y - The y offset of the rectangle
+	 * @param {object} [pAnchor={ x: 0.5, y: 0.5 }] - The origin point of the rectangle
+	 * @param {number} pAnchor.x - The x coordinate of the anchor
+	 * @param {number} pAnchor.y - The y coordinate of the anchor
+	 * @returns {object} The point inside/outside of the rectangle after rotating.  
 	 */
-	getPointRotated(pAngle, pAnchor = { x: 0.5, y: 0.5 }) {
+	getPoint(pTheta=0, pOffset = { x: 0, y: 0 }, pAnchor = { x: 0.5, y: 0.5 }) {
 		// cx, cy - center of square coordinates
 		// x, y - coordinates of a corner point of the square
 		// theta is the angle of rotation
-
-		const cx = (this.owner.x + this.owner.xIconOffset) + (this.iconSize.width * pAnchor.x);
-		const cy = (this.owner.y + this.owner.yIconOffset) + (this.iconSize.height * pAnchor.y);
-
-		// We take away 1 from the position of the owner because we don't want to point to start inside the bounds, so to use true coordinates of 1-iconSize for the point, we must start outside of the bounds.
-		// Otherwise we would have to use 0-iconSize-1 for the points coordinates
-		const point = { x: (this.owner.x - 1 + this.owner.xIconOffset) + this.rawPixelsPoint.x, y: (this.owner.y - 1 + this.owner.yIconOffset) + this.rawPixelsPoint.y };
-
+		const cx = (this.rectangle.x + pOffset.x) + (this.rectangleSize.width * pAnchor.x);
+		const cy = (this.rectangle.y + pOffset.y) + (this.rectangleSize.height * pAnchor.y);
+		// We take away 1 from the position of the rectangle because we don't want to point to start inside the boundaries of the rectangle
+		// Otherwise we would have to use 0 to (rectangle.xy-1) for the points coordinates
+		const point = { x: (this.rectangle.x + pOffset.x - 1) + this.rawPixelsPoint.x, y: (this.rectangle.y + pOffset.y - 1) + this.rawPixelsPoint.y };
 		// translate point to origin
 		const tempX = point.x - cx;
 		const tempY = point.y - cy;
-
+		console.log(tempX, tempY)
 		// now apply rotation
-		const rotatedX = tempX*Math.cos(pAngle) - tempY*(-Math.sin(pAngle));
-		const rotatedY = tempX*(-Math.sin(pAngle)) + tempY*Math.cos(pAngle);
-
+		const rotatedX = tempX*Math.cos(pTheta) - tempY*(-Math.sin(pTheta));
+		const rotatedY = tempX*(-Math.sin(pTheta)) + tempY*Math.cos(pTheta);
 		// translate back
 		const x = rotatedX + cx;
 		const y = rotatedY + cy;
@@ -69,16 +127,13 @@ class IconPoint {
 	/**
 	 * @description Sets the static point and defines the raw pixels value
 	 * 
-	 * @param {object} pPoint - The static point in the icon
-	 * @param {boolean} pUseRawPixels - Whether or not this point is defined in raw pixels
+	 * @private
+	 * @param {object} pPoint - The point that exists inside/outside the rectangle  
+	 * @param {number} pPoint.x - The x coordinate of the point inside/outside the rectangle  
+	 * @param {number} pPoint.y - The y coordinate of the point inside/outside the rectangle  
 	 */
-	setPoint(pPoint, pUseRawPixels) {
-		if (pUseRawPixels) {
-			this.rawPixelsPoint.x = parseInt(pPoint.x);
-			this.rawPixelsPoint.y = parseInt(pPoint.y);
-		} else {
-			this.rawPixelsPoint.x = Math.max(parseInt(pPoint.x * this.iconSize.width), 1);
-			this.rawPixelsPoint.y = Math.max(parseInt(pPoint.y * this.iconSize.height), 1);
-		}
+	setPoint(pPoint) {
+		this.rawPixelsPoint.x = pPoint.useRawPixels ? parseInt(pPoint.x) : Math.max(parseInt(pPoint.x * this.rectangleSize.width), 1);
+		this.rawPixelsPoint.y = pPoint.useRawPixels ? parseInt(pPoint.y) : Math.max(parseInt(pPoint.y * this.rectangleSize.height), 1);
 	}
 }
