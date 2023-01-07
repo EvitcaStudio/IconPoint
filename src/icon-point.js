@@ -129,12 +129,10 @@ globalThis.IconPoint = class {
 	 * // Verify the point is where it should be after the rectangle changes positions
 	 * console.log(tlPoint.getPoint()) // { x: 100, y: 0 } This shows that the point has moved to the updated position of the rectangle
 	 * 
-	 * 
 	 * // Applying some offsets to the rectangle
 	 * const rectangleOffsets = { x: 25, y: 25 };  
 	 * // Verify the point is where it should be after offsets have been applied to the rectangle
 	 * console.log(tlPoint.getPoint(undefined, rectangleOffsets)) // { x: 125, y: 25 } This shows that the point has moved to the updated posiiton based on the offsets of the rectangle
-	 * 
 	 * 
 	 * // Applying some rotation to the rectangle
 	 * const theta = Math.PI;

@@ -8,11 +8,11 @@
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
   <script src="script/manual.js"></script>
-<meta name="description" content="A point that exists inside/outside a virtual rectangle. The point&apos;s position inside/outside of the rectangle is maintained when the rectangle is rotated."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="IconPoint"><meta property="twitter:description" content="A point that exists inside/outside a virtual rectangle. The point&apos;s position inside/outside of the rectangle is maintained when the rectangle is rotated."><meta property="twitter:image" content="https://avatars.githubusercontent.com/u/56242467?v=4"></head>
+<meta name="description" content="A point that exists inside/outside a virtual rectangle. The point&apos;s position inside/outside of the rectangle is maintained when the rectangle is rotated."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="IconPoint"><meta property="twitter:description" content="A point that exists inside/outside a virtual rectangle. The point&apos;s position inside/outside of the rectangle is maintained when the rectangle is rotated."><meta property="twitter:image" content="./evitcastudio_round_branding.png"></head>
 <body class="layout-container" data-ice="rootContainer">
 
 <header>
-  <a href="./">Home</a>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
   
   <a href="identifiers.html">Reference</a>
   <a href="source.html">Source</a>
@@ -35,13 +35,37 @@
 </nav>
 
 <div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="iconpoint">IconPoint</h1><p>A point that exists inside/outside a virtual rectangle. The point&apos;s position inside/outside of the rectangle is maintained when the rectangle is rotated.  </p>
-<h1 id="license">License</h1><p>IconPoint is free software, available under the terms of a MIT style License.</p>
-<p>Copyright (c) 2022 Evitca Studio</p>
-<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
-<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
-<p>This software cannot be sold by itself. It must be used in a project and the project itself can be sold. In the case it is not, you the &quot;user&quot; of this software are breaking the license and agreeing to forfeit its usage.</p>
-<p>Neither the name &#x201C;EvitcaStudio&#x201D; or &quot;IconPoint&quot; nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</p>
-<p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<h1 id="-a-href--https---evitcastudio-github-io-iconpoint---documentation--a--&#x1F4D6;"><a href="https://evitcastudio.github.io/IconPoint/">Documentation</a> &#x1F4D6;</h1><p>This plugin provides an easy way to keep track of points on moving / rotating rectangles</p>
+<h1 id="sample-usage">Sample usage</h1><p>In this example it shows off how to retrieve the point after moving/rotating/offseting the rectangle the point exists inside/outside of.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">// Create a rectangle at the position of (0,0)
+const rectangle = { x: 0, y: 0 };
+// Make the dimensions of the rectangle 100x50
+const rectangleSize = { width: 100, height: 50 };
+// Create a point at the top left corner of the rectangle
+const point = { x: 1, y: 1, useRawPixels: true };
+// Create an icon point that will track the point on this rectangle when it moves/rotates
+const tlPoint = new IconPoint(rectangle, rectangleSize, point);
+
+// Verify the point is where it should be
+console.log(tlPoint.getPoint()) // { x: 0, y: 0 } This shows that the point is at the position (0,0) which is the top left position of the rectangle
+
+// Changing the position of the rectangle
+rectangle.x += 100;
+// Verify the point is where it should be after the rectangle changes positions
+console.log(tlPoint.getPoint()) // { x: 100, y: 0 } This shows that the point has moved to the updated position of the rectangle
+
+// Applying some offsets to the rectangle
+const rectangleOffsets = { x: 25, y: 25 };  
+// Verify the point is where it should be after offsets have been applied to the rectangle
+console.log(tlPoint.getPoint(undefined, rectangleOffsets)) // { x: 125, y: 25 } This shows that the point has moved to the updated posiiton based on the offsets of the rectangle
+
+// Applying some rotation to the rectangle
+const theta = Math.PI;
+// Verify the point is where it should be after rotating the rectangle by `theta`
+console.log(tlPoint.getPoint(theta)) // {x: 200, y: 50.00000000000001} This shows that the point has moved to the updated position after the rectangle had been rotated by `theta`.</code>
+</code></pre>
+<h1 id="support-&#x270A;">Support &#x270A;</h1><p>If this plugin has helped you in any way please consider giving it a &#x2B50;!</p>
+<h1 id="license-&#x2696;&#xFE0F;">License &#x2696;&#xFE0F;</h1><p>Copyright &#xA9; 2023 <a href="https://github.com/EvitcaStudio">EvitcaStudio</a><br>The license is located <a href="https://github.com/EvitcaStudio/IconPoint/blob/main/LICENSE.md">here</a>.</p>
 </div>
 </div>
 

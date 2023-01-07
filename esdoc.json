@@ -15,12 +15,12 @@
       "unexportedIdentifier": {"enable": true},
       "typeInference": {"enable": true},
       "brand": {
-        "logo": "",
+        "logo": "./evitcastudio_round_branding.png",
         "title": "IconPoint",
         "description": "A point that exists inside/outside a virtual rectangle. The point's position inside/outside of the rectangle is maintained when the rectangle is rotated.",
         "repository": "https://github.com/EvitcaStudio/IconPoint",
         "author": "https://github.com/doubleactii",
-        "image": "https://avatars.githubusercontent.com/u/56242467?v=4"
+        "image": "./evitcastudio_round_branding.png"
       }
     }
   }] 

@@ -1,17 +1,44 @@
 # IconPoint
 A point that exists inside/outside a virtual rectangle. The point's position inside/outside of the rectangle is maintained when the rectangle is rotated.  
 
-# License  
-IconPoint is free software, available under the terms of a MIT style License.
+# [Documentation](https://evitcastudio.github.io/IconPoint/) 📖
 
-Copyright (c) 2022 Evitca Studio
+This plugin provides an easy way to keep track of points on moving / rotating rectangles
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+# Sample usage 
+In this example it shows off how to retrieve the point after moving/rotating/offseting the rectangle the point exists inside/outside of.
+```js
+// Create a rectangle at the position of (0,0)
+const rectangle = { x: 0, y: 0 };
+// Make the dimensions of the rectangle 100x50
+const rectangleSize = { width: 100, height: 50 };
+// Create a point at the top left corner of the rectangle
+const point = { x: 1, y: 1, useRawPixels: true };
+// Create an icon point that will track the point on this rectangle when it moves/rotates
+const tlPoint = new IconPoint(rectangle, rectangleSize, point);
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+// Verify the point is where it should be
+console.log(tlPoint.getPoint()) // { x: 0, y: 0 } This shows that the point is at the position (0,0) which is the top left position of the rectangle
 
-This software cannot be sold by itself. It must be used in a project and the project itself can be sold. In the case it is not, you the "user" of this software are breaking the license and agreeing to forfeit its usage.
+// Changing the position of the rectangle
+rectangle.x += 100;
+// Verify the point is where it should be after the rectangle changes positions
+console.log(tlPoint.getPoint()) // { x: 100, y: 0 } This shows that the point has moved to the updated position of the rectangle
 
-Neither the name “EvitcaStudio” or "IconPoint" nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+// Applying some offsets to the rectangle
+const rectangleOffsets = { x: 25, y: 25 };  
+// Verify the point is where it should be after offsets have been applied to the rectangle
+console.log(tlPoint.getPoint(undefined, rectangleOffsets)) // { x: 125, y: 25 } This shows that the point has moved to the updated posiiton based on the offsets of the rectangle
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+// Applying some rotation to the rectangle
+const theta = Math.PI;
+// Verify the point is where it should be after rotating the rectangle by `theta`
+console.log(tlPoint.getPoint(theta)) // {x: 200, y: 50.00000000000001} This shows that the point has moved to the updated position after the rectangle had been rotated by `theta`.
+```
+
+# Support ✊
+If this plugin has helped you in any way please consider giving it a ⭐!
+
+# License ⚖️
+Copyright © 2023 [EvitcaStudio](https://github.com/EvitcaStudio)  
+The license is located [here](https://github.com/EvitcaStudio/IconPoint/blob/main/LICENSE.md).
