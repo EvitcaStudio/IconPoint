@@ -170,7 +170,7 @@ globalThis.IconPoint = class {
 	 * @param {number} pPoint.y - The y coordinate of the point inside/outside the rectangle  
 	 */
 	setPoint(pPoint) {
-		this.rawPixelsPoint.x = pPoint.useRawPixels ? parseInt(pPoint.x) : Math.max(parseInt(pPoint.x * this.rectangleSize.width), 1);
-		this.rawPixelsPoint.y = pPoint.useRawPixels ? parseInt(pPoint.y) : Math.max(parseInt(pPoint.y * this.rectangleSize.height), 1);
+		this.rawPixelsPoint.x = pPoint.useRawPixels ? parseInt(pPoint.x) : parseInt(pPoint.x * this.rectangleSize.width);
+		this.rawPixelsPoint.y = pPoint.useRawPixels ? parseInt(pPoint.y) : parseInt(pPoint.y * this.rectangleSize.height);
 	}
 }
