@@ -38,7 +38,7 @@
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/** 
  * @file A point that exists inside/outside a virtual rectangle. The point&apos;s position inside/outside of the rectangle is maintained when the rectangle is rotated. 
  * 
- * @version 1.1.0
+ * @version 1.2.0
  * @author doubleactii
  * @copyright
  * @license
@@ -207,11 +207,10 @@ globalThis.IconPoint = class {
 	 * @param {number} pPoint.y - The y coordinate of the point inside/outside the rectangle  
 	 */
 	setPoint(pPoint) {
-		this.rawPixelsPoint.x = pPoint.useRawPixels ? parseInt(pPoint.x) : Math.max(parseInt(pPoint.x * this.rectangleSize.width), 1);
-		this.rawPixelsPoint.y = pPoint.useRawPixels ? parseInt(pPoint.y) : Math.max(parseInt(pPoint.y * this.rectangleSize.height), 1);
+		this.rawPixelsPoint.x = pPoint.useRawPixels ? parseInt(pPoint.x) : parseInt(pPoint.x * this.rectangleSize.width);
+		this.rawPixelsPoint.y = pPoint.useRawPixels ? parseInt(pPoint.y) : parseInt(pPoint.y * this.rectangleSize.height);
 	}
-}
-</code></pre>
+}</code></pre>
 
 </div>
 
