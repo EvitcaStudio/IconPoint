@@ -1,5 +1,5 @@
 # IconPoint
-A point that exists inside/outside a virtual rectangle. The point's position inside/outside of the rectangle is maintained when the rectangle is rotated.  
+A point that exists inside/outside a virtual rectangle. The point's position inside/outside of the rectangle is maintained when the rectangle is moved/rotated.  
 
 # [Documentation](https://evitcastudio.github.io/IconPoint/) 📖
 
