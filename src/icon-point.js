@@ -105,7 +105,7 @@ globalThis.IconPoint = class {
 		}
 	}
 	/**
-	 * Gets the new point's position inside a rectangle after taking pTheta into account
+	 * Gets the point's new position inside/outside the rectangle after taking the movement/rotation of the rectangle into account
 	 * 
 	 * @param {number} [pTheta=0] - Rotation of the rectangle this point exists inside/outside of in radians
 	 * @param {object} [pOffset={ x: 0, y: 0 }] - The offset of the rectangle
@@ -162,7 +162,7 @@ globalThis.IconPoint = class {
 		return { x: x, y: y };
 	}
 	/**
-	 * Sets the static point and defines the raw pixels value
+	 * Sets the point's relative position to the rectangle  
 	 * 
 	 * @private
 	 * @param {object} pPoint - The point that exists inside/outside the rectangle  
