@@ -61,8 +61,8 @@ globalThis.IconPoint = class {
 		 * 
 		 * @private
 		 * @type {object} rawPixelsPoint - The object storing the raw pixel position of the point
-		 * @type {number} rawPixelsPoint.x - The raw x pixel position of this point
-		 * @type {number} rawPixelsPoint.y - The raw y pixel position of this point 
+		 * @property {number} x - The raw x pixel position of this point
+		 * @property {number} y - The raw y pixel position of this point 
 		 */
 		this.rawPixelsPoint = { x: 0, y: 0 };
 		/**
@@ -70,17 +70,17 @@ globalThis.IconPoint = class {
 		 * 
 		 * @private
 		 * @type {object} rectangle - The object storing the position of the rectangle
-		 * @type {number} rectangle.x - The x position of the rectangle  
-		 * @type {number} rectangle.y - The y position of the rectangle  
+		 * @property {number} x - The x position of the rectangle  
+		 * @property {number} y - The y position of the rectangle  
 		 */
-		this.rectangle = null;
+		this.rectangle = {};
 		/**
-		 * An object storing the raw pixel position  
+		 * An object storing the size of the rectangle
 		 * 
 		 * @private
 		 * @type {object} rectangleSize - The object storing the dimensions of the rectangle
-		 * @type {number} rectangleSize.width - The width of the rectangle  
-		 * @type {number} rectangleSize.height - The height of the rectangle  
+		 * @property {number} width - The width of the rectangle  
+		 * @property {number} height - The height of the rectangle  
 		 */
 		this.rectangleSize = { width: 32, height: 32 };
 		// Check if the rectangle is a valid type
