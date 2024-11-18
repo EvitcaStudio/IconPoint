@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 9903,
+  "end": 9930,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 9903,
+    "end": 9930,
     "loc": {
       "start": {
         "line": 1,
@@ -31,7 +31,7 @@
       {
         "type": "Identifier",
         "start": 1137,
-        "end": 9839,
+        "end": 9866,
         "loc": {
           "start": {
             "line": 29,
@@ -64,7 +64,7 @@
         "body": {
           "type": "ClassBody",
           "start": 1153,
-          "end": 9839,
+          "end": 9866,
           "loc": {
             "start": {
               "line": 29,
@@ -519,10 +519,10 @@
                   }
                 },
                 "extra": {
-                  "rawValue": "1.0.0",
-                  "raw": "\"1.0.0\""
+                  "rawValue": "1.1.0",
+                  "raw": "\"1.1.0\""
                 },
-                "value": "1.0.0"
+                "value": "1.1.0"
               },
               "leadingComments": [
                 {
@@ -6526,9 +6526,9 @@
               "trailingComments": [
                 {
                   "type": "CommentBlock",
-                  "value": "*\n     * Updates the bounds of the rectangle this icon point exists inside/outside of.\n     * @param pBounds - The bounds to update the rectangle with.\n     * @prop {number} pBounds.width - The width of the new rectangle.\n     * @prop {number} pBounds.height - The height of the new rectangle.\n     ",
+                  "value": "*\n     * Updates the bounds of the rectangle this icon point exists inside/outside of.\n     * @param {Bounds} pBounds - The bounds to update the rectangle with.\n     * @prop {number} pBounds.width - The width of the new rectangle.\n     * @prop {number} pBounds.height - The height of the new rectangle.\n     ",
                   "start": 8932,
-                  "end": 9235,
+                  "end": 9244,
                   "loc": {
                     "start": {
                       "line": 185,
@@ -6544,8 +6544,8 @@
             },
             {
               "type": "ClassMethod",
-              "start": 9240,
-              "end": 9384,
+              "start": 9249,
+              "end": 9393,
               "loc": {
                 "start": {
                   "line": 191,
@@ -6560,8 +6560,8 @@
               "computed": false,
               "key": {
                 "type": "Identifier",
-                "start": 9240,
-                "end": 9252,
+                "start": 9249,
+                "end": 9261,
                 "loc": {
                   "start": {
                     "line": 191,
@@ -6584,8 +6584,8 @@
               "params": [
                 {
                   "type": "Identifier",
-                  "start": 9253,
-                  "end": 9260,
+                  "start": 9262,
+                  "end": 9269,
                   "loc": {
                     "start": {
                       "line": 191,
@@ -6602,8 +6602,8 @@
               ],
               "body": {
                 "type": "BlockStatement",
-                "start": 9262,
-                "end": 9384,
+                "start": 9271,
+                "end": 9393,
                 "loc": {
                   "start": {
                     "line": 191,
@@ -6617,8 +6617,8 @@
                 "body": [
                   {
                     "type": "VariableDeclaration",
-                    "start": 9272,
-                    "end": 9306,
+                    "start": 9281,
+                    "end": 9315,
                     "loc": {
                       "start": {
                         "line": 192,
@@ -6632,8 +6632,8 @@
                     "declarations": [
                       {
                         "type": "VariableDeclarator",
-                        "start": 9278,
-                        "end": 9305,
+                        "start": 9287,
+                        "end": 9314,
                         "loc": {
                           "start": {
                             "line": 192,
@@ -6646,8 +6646,8 @@
                         },
                         "id": {
                           "type": "ObjectPattern",
-                          "start": 9278,
-                          "end": 9295,
+                          "start": 9287,
+                          "end": 9304,
                           "loc": {
                             "start": {
                               "line": 192,
@@ -6661,8 +6661,8 @@
                           "properties": [
                             {
                               "type": "ObjectProperty",
-                              "start": 9280,
-                              "end": 9285,
+                              "start": 9289,
+                              "end": 9294,
                               "loc": {
                                 "start": {
                                   "line": 192,
@@ -6678,8 +6678,8 @@
                               "computed": false,
                               "key": {
                                 "type": "Identifier",
-                                "start": 9280,
-                                "end": 9285,
+                                "start": 9289,
+                                "end": 9294,
                                 "loc": {
                                   "start": {
                                     "line": 192,
@@ -6695,8 +6695,8 @@
                               },
                               "value": {
                                 "type": "Identifier",
-                                "start": 9280,
-                                "end": 9285,
+                                "start": 9289,
+                                "end": 9294,
                                 "loc": {
                                   "start": {
                                     "line": 192,
@@ -6716,8 +6716,8 @@
                             },
                             {
                               "type": "ObjectProperty",
-                              "start": 9287,
-                              "end": 9293,
+                              "start": 9296,
+                              "end": 9302,
                               "loc": {
                                 "start": {
                                   "line": 192,
@@ -6733,8 +6733,8 @@
                               "computed": false,
                               "key": {
                                 "type": "Identifier",
-                                "start": 9287,
-                                "end": 9293,
+                                "start": 9296,
+                                "end": 9302,
                                 "loc": {
                                   "start": {
                                     "line": 192,
@@ -6750,8 +6750,8 @@
                               },
                               "value": {
                                 "type": "Identifier",
-                                "start": 9287,
-                                "end": 9293,
+                                "start": 9296,
+                                "end": 9302,
                                 "loc": {
                                   "start": {
                                     "line": 192,
@@ -6773,8 +6773,8 @@
                         },
                         "init": {
                           "type": "Identifier",
-                          "start": 9298,
-                          "end": 9305,
+                          "start": 9307,
+                          "end": 9314,
                           "loc": {
                             "start": {
                               "line": 192,
@@ -6794,8 +6794,8 @@
                   },
                   {
                     "type": "ExpressionStatement",
-                    "start": 9315,
-                    "end": 9341,
+                    "start": 9324,
+                    "end": 9350,
                     "loc": {
                       "start": {
                         "line": 193,
@@ -6808,8 +6808,8 @@
                     },
                     "expression": {
                       "type": "AssignmentExpression",
-                      "start": 9315,
-                      "end": 9340,
+                      "start": 9324,
+                      "end": 9349,
                       "loc": {
                         "start": {
                           "line": 193,
@@ -6823,8 +6823,8 @@
                       "operator": "=",
                       "left": {
                         "type": "MemberExpression",
-                        "start": 9315,
-                        "end": 9332,
+                        "start": 9324,
+                        "end": 9341,
                         "loc": {
                           "start": {
                             "line": 193,
@@ -6837,8 +6837,8 @@
                         },
                         "object": {
                           "type": "MemberExpression",
-                          "start": 9315,
-                          "end": 9326,
+                          "start": 9324,
+                          "end": 9335,
                           "loc": {
                             "start": {
                               "line": 193,
@@ -6851,8 +6851,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 9315,
-                            "end": 9319,
+                            "start": 9324,
+                            "end": 9328,
                             "loc": {
                               "start": {
                                 "line": 193,
@@ -6866,8 +6866,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 9320,
-                            "end": 9326,
+                            "start": 9329,
+                            "end": 9335,
                             "loc": {
                               "start": {
                                 "line": 193,
@@ -6885,8 +6885,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 9327,
-                          "end": 9332,
+                          "start": 9336,
+                          "end": 9341,
                           "loc": {
                             "start": {
                               "line": 193,
@@ -6904,8 +6904,8 @@
                       },
                       "right": {
                         "type": "Identifier",
-                        "start": 9335,
-                        "end": 9340,
+                        "start": 9344,
+                        "end": 9349,
                         "loc": {
                           "start": {
                             "line": 193,
@@ -6923,8 +6923,8 @@
                   },
                   {
                     "type": "ExpressionStatement",
-                    "start": 9350,
-                    "end": 9378,
+                    "start": 9359,
+                    "end": 9387,
                     "loc": {
                       "start": {
                         "line": 194,
@@ -6937,8 +6937,8 @@
                     },
                     "expression": {
                       "type": "AssignmentExpression",
-                      "start": 9350,
-                      "end": 9377,
+                      "start": 9359,
+                      "end": 9386,
                       "loc": {
                         "start": {
                           "line": 194,
@@ -6952,8 +6952,8 @@
                       "operator": "=",
                       "left": {
                         "type": "MemberExpression",
-                        "start": 9350,
-                        "end": 9368,
+                        "start": 9359,
+                        "end": 9377,
                         "loc": {
                           "start": {
                             "line": 194,
@@ -6966,8 +6966,8 @@
                         },
                         "object": {
                           "type": "MemberExpression",
-                          "start": 9350,
-                          "end": 9361,
+                          "start": 9359,
+                          "end": 9370,
                           "loc": {
                             "start": {
                               "line": 194,
@@ -6980,8 +6980,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 9350,
-                            "end": 9354,
+                            "start": 9359,
+                            "end": 9363,
                             "loc": {
                               "start": {
                                 "line": 194,
@@ -6995,8 +6995,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 9355,
-                            "end": 9361,
+                            "start": 9364,
+                            "end": 9370,
                             "loc": {
                               "start": {
                                 "line": 194,
@@ -7014,8 +7014,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 9362,
-                          "end": 9368,
+                          "start": 9371,
+                          "end": 9377,
                           "loc": {
                             "start": {
                               "line": 194,
@@ -7033,8 +7033,8 @@
                       },
                       "right": {
                         "type": "Identifier",
-                        "start": 9371,
-                        "end": 9377,
+                        "start": 9380,
+                        "end": 9386,
                         "loc": {
                           "start": {
                             "line": 194,
@@ -7057,9 +7057,9 @@
               "leadingComments": [
                 {
                   "type": "CommentBlock",
-                  "value": "*\n     * Updates the bounds of the rectangle this icon point exists inside/outside of.\n     * @param pBounds - The bounds to update the rectangle with.\n     * @prop {number} pBounds.width - The width of the new rectangle.\n     * @prop {number} pBounds.height - The height of the new rectangle.\n     ",
+                  "value": "*\n     * Updates the bounds of the rectangle this icon point exists inside/outside of.\n     * @param {Bounds} pBounds - The bounds to update the rectangle with.\n     * @prop {number} pBounds.width - The width of the new rectangle.\n     * @prop {number} pBounds.height - The height of the new rectangle.\n     ",
                   "start": 8932,
-                  "end": 9235,
+                  "end": 9244,
                   "loc": {
                     "start": {
                       "line": 185,
@@ -7075,9 +7075,9 @@
               "trailingComments": [
                 {
                   "type": "CommentBlock",
-                  "value": "*\n     * Changes the icon point position.\n     * @param pPoint - The point to update this icon point with.\n     * @prop {number} pPoint.x - The x coordinate of the point inside/outside the rectangle.\n     * @prop {number} pPoint.y - The y coordinate of the point inside/outside the rectangle.\n     * @prop {boolean} [pPoint.isNormalized] - If the point's value is normalized.\n     ",
-                  "start": 9389,
-                  "end": 9774,
+                  "value": "*\n     * Changes the icon point position.\n     * @param {PositionalPoint} pPoint - The point to update this icon point with.\n     * @prop {number} pPoint.x - The x coordinate of the point inside/outside the rectangle.\n     * @prop {number} pPoint.y - The y coordinate of the point inside/outside the rectangle.\n     * @prop {boolean} [pPoint.isNormalized] - If the point's value is normalized.\n     ",
+                  "start": 9398,
+                  "end": 9801,
                   "loc": {
                     "start": {
                       "line": 196,
@@ -7093,8 +7093,8 @@
             },
             {
               "type": "ClassMethod",
-              "start": 9779,
-              "end": 9837,
+              "start": 9806,
+              "end": 9864,
               "loc": {
                 "start": {
                   "line": 203,
@@ -7109,8 +7109,8 @@
               "computed": false,
               "key": {
                 "type": "Identifier",
-                "start": 9779,
-                "end": 9790,
+                "start": 9806,
+                "end": 9817,
                 "loc": {
                   "start": {
                     "line": 203,
@@ -7133,8 +7133,8 @@
               "params": [
                 {
                   "type": "Identifier",
-                  "start": 9791,
-                  "end": 9797,
+                  "start": 9818,
+                  "end": 9824,
                   "loc": {
                     "start": {
                       "line": 203,
@@ -7151,8 +7151,8 @@
               ],
               "body": {
                 "type": "BlockStatement",
-                "start": 9799,
-                "end": 9837,
+                "start": 9826,
+                "end": 9864,
                 "loc": {
                   "start": {
                     "line": 203,
@@ -7166,8 +7166,8 @@
                 "body": [
                   {
                     "type": "ExpressionStatement",
-                    "start": 9809,
-                    "end": 9831,
+                    "start": 9836,
+                    "end": 9858,
                     "loc": {
                       "start": {
                         "line": 204,
@@ -7180,8 +7180,8 @@
                     },
                     "expression": {
                       "type": "CallExpression",
-                      "start": 9809,
-                      "end": 9830,
+                      "start": 9836,
+                      "end": 9857,
                       "loc": {
                         "start": {
                           "line": 204,
@@ -7194,8 +7194,8 @@
                       },
                       "callee": {
                         "type": "MemberExpression",
-                        "start": 9809,
-                        "end": 9822,
+                        "start": 9836,
+                        "end": 9849,
                         "loc": {
                           "start": {
                             "line": 204,
@@ -7208,8 +7208,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 9809,
-                          "end": 9813,
+                          "start": 9836,
+                          "end": 9840,
                           "loc": {
                             "start": {
                               "line": 204,
@@ -7223,8 +7223,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 9814,
-                          "end": 9822,
+                          "start": 9841,
+                          "end": 9849,
                           "loc": {
                             "start": {
                               "line": 204,
@@ -7243,8 +7243,8 @@
                       "arguments": [
                         {
                           "type": "Identifier",
-                          "start": 9823,
-                          "end": 9829,
+                          "start": 9850,
+                          "end": 9856,
                           "loc": {
                             "start": {
                               "line": 204,
@@ -7267,9 +7267,9 @@
               "leadingComments": [
                 {
                   "type": "CommentBlock",
-                  "value": "*\n     * Changes the icon point position.\n     * @param pPoint - The point to update this icon point with.\n     * @prop {number} pPoint.x - The x coordinate of the point inside/outside the rectangle.\n     * @prop {number} pPoint.y - The y coordinate of the point inside/outside the rectangle.\n     * @prop {boolean} [pPoint.isNormalized] - If the point's value is normalized.\n     ",
-                  "start": 9389,
-                  "end": 9774,
+                  "value": "*\n     * Changes the icon point position.\n     * @param {PositionalPoint} pPoint - The point to update this icon point with.\n     * @prop {number} pPoint.x - The x coordinate of the point inside/outside the rectangle.\n     * @prop {number} pPoint.y - The y coordinate of the point inside/outside the rectangle.\n     * @prop {boolean} [pPoint.isNormalized] - If the point's value is normalized.\n     ",
+                  "start": 9398,
+                  "end": 9801,
                   "loc": {
                     "start": {
                       "line": 196,
@@ -7291,8 +7291,8 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 9841,
-        "end": 9862,
+        "start": 9868,
+        "end": 9889,
         "loc": {
           "start": {
             "line": 208,
@@ -7307,8 +7307,8 @@
         "specifiers": [
           {
             "type": "ExportSpecifier",
-            "start": 9850,
-            "end": 9859,
+            "start": 9877,
+            "end": 9886,
             "loc": {
               "start": {
                 "line": 208,
@@ -7321,8 +7321,8 @@
             },
             "local": {
               "type": "Identifier",
-              "start": 9850,
-              "end": 9859,
+              "start": 9877,
+              "end": 9886,
               "loc": {
                 "start": {
                   "line": 208,
@@ -7338,8 +7338,8 @@
             },
             "exported": {
               "type": "Identifier",
-              "start": 9850,
-              "end": 9859,
+              "start": 9877,
+              "end": 9886,
               "loc": {
                 "start": {
                   "line": 208,
@@ -7360,8 +7360,8 @@
           {
             "type": "CommentLine",
             "value": "# sourceMappingURL=icon-point.mjs.map",
-            "start": 9863,
-            "end": 9902,
+            "start": 9890,
+            "end": 9929,
             "loc": {
               "start": {
                 "line": 209,
@@ -7377,8 +7377,8 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 9841,
-        "end": 9862,
+        "start": 9868,
+        "end": 9889,
         "loc": {
           "start": {
             "line": 208,
@@ -7392,7 +7392,7 @@
         "declaration": {
           "type": "ClassDeclaration",
           "start": 1137,
-          "end": 9839,
+          "end": 9866,
           "loc": {
             "start": {
               "line": 29,
@@ -7425,7 +7425,7 @@
           "body": {
             "type": "ClassBody",
             "start": 1153,
-            "end": 9839,
+            "end": 9866,
             "loc": {
               "start": {
                 "line": 29,
@@ -7880,10 +7880,10 @@
                     }
                   },
                   "extra": {
-                    "rawValue": "1.0.0",
-                    "raw": "\"1.0.0\""
+                    "rawValue": "1.1.0",
+                    "raw": "\"1.1.0\""
                   },
-                  "value": "1.0.0"
+                  "value": "1.1.0"
                 },
                 "leadingComments": [
                   {
@@ -13887,9 +13887,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n     * Updates the bounds of the rectangle this icon point exists inside/outside of.\n     * @param pBounds - The bounds to update the rectangle with.\n     * @prop {number} pBounds.width - The width of the new rectangle.\n     * @prop {number} pBounds.height - The height of the new rectangle.\n     ",
+                    "value": "*\n     * Updates the bounds of the rectangle this icon point exists inside/outside of.\n     * @param {Bounds} pBounds - The bounds to update the rectangle with.\n     * @prop {number} pBounds.width - The width of the new rectangle.\n     * @prop {number} pBounds.height - The height of the new rectangle.\n     ",
                     "start": 8932,
-                    "end": 9235,
+                    "end": 9244,
                     "loc": {
                       "start": {
                         "line": 185,
@@ -13905,8 +13905,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 9240,
-                "end": 9384,
+                "start": 9249,
+                "end": 9393,
                 "loc": {
                   "start": {
                     "line": 191,
@@ -13921,8 +13921,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 9240,
-                  "end": 9252,
+                  "start": 9249,
+                  "end": 9261,
                   "loc": {
                     "start": {
                       "line": 191,
@@ -13945,8 +13945,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 9253,
-                    "end": 9260,
+                    "start": 9262,
+                    "end": 9269,
                     "loc": {
                       "start": {
                         "line": 191,
@@ -13963,8 +13963,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 9262,
-                  "end": 9384,
+                  "start": 9271,
+                  "end": 9393,
                   "loc": {
                     "start": {
                       "line": 191,
@@ -13978,8 +13978,8 @@
                   "body": [
                     {
                       "type": "VariableDeclaration",
-                      "start": 9272,
-                      "end": 9306,
+                      "start": 9281,
+                      "end": 9315,
                       "loc": {
                         "start": {
                           "line": 192,
@@ -13993,8 +13993,8 @@
                       "declarations": [
                         {
                           "type": "VariableDeclarator",
-                          "start": 9278,
-                          "end": 9305,
+                          "start": 9287,
+                          "end": 9314,
                           "loc": {
                             "start": {
                               "line": 192,
@@ -14007,8 +14007,8 @@
                           },
                           "id": {
                             "type": "ObjectPattern",
-                            "start": 9278,
-                            "end": 9295,
+                            "start": 9287,
+                            "end": 9304,
                             "loc": {
                               "start": {
                                 "line": 192,
@@ -14022,8 +14022,8 @@
                             "properties": [
                               {
                                 "type": "ObjectProperty",
-                                "start": 9280,
-                                "end": 9285,
+                                "start": 9289,
+                                "end": 9294,
                                 "loc": {
                                   "start": {
                                     "line": 192,
@@ -14039,8 +14039,8 @@
                                 "computed": false,
                                 "key": {
                                   "type": "Identifier",
-                                  "start": 9280,
-                                  "end": 9285,
+                                  "start": 9289,
+                                  "end": 9294,
                                   "loc": {
                                     "start": {
                                       "line": 192,
@@ -14056,8 +14056,8 @@
                                 },
                                 "value": {
                                   "type": "Identifier",
-                                  "start": 9280,
-                                  "end": 9285,
+                                  "start": 9289,
+                                  "end": 9294,
                                   "loc": {
                                     "start": {
                                       "line": 192,
@@ -14077,8 +14077,8 @@
                               },
                               {
                                 "type": "ObjectProperty",
-                                "start": 9287,
-                                "end": 9293,
+                                "start": 9296,
+                                "end": 9302,
                                 "loc": {
                                   "start": {
                                     "line": 192,
@@ -14094,8 +14094,8 @@
                                 "computed": false,
                                 "key": {
                                   "type": "Identifier",
-                                  "start": 9287,
-                                  "end": 9293,
+                                  "start": 9296,
+                                  "end": 9302,
                                   "loc": {
                                     "start": {
                                       "line": 192,
@@ -14111,8 +14111,8 @@
                                 },
                                 "value": {
                                   "type": "Identifier",
-                                  "start": 9287,
-                                  "end": 9293,
+                                  "start": 9296,
+                                  "end": 9302,
                                   "loc": {
                                     "start": {
                                       "line": 192,
@@ -14134,8 +14134,8 @@
                           },
                           "init": {
                             "type": "Identifier",
-                            "start": 9298,
-                            "end": 9305,
+                            "start": 9307,
+                            "end": 9314,
                             "loc": {
                               "start": {
                                 "line": 192,
@@ -14155,8 +14155,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 9315,
-                      "end": 9341,
+                      "start": 9324,
+                      "end": 9350,
                       "loc": {
                         "start": {
                           "line": 193,
@@ -14169,8 +14169,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 9315,
-                        "end": 9340,
+                        "start": 9324,
+                        "end": 9349,
                         "loc": {
                           "start": {
                             "line": 193,
@@ -14184,8 +14184,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 9315,
-                          "end": 9332,
+                          "start": 9324,
+                          "end": 9341,
                           "loc": {
                             "start": {
                               "line": 193,
@@ -14198,8 +14198,8 @@
                           },
                           "object": {
                             "type": "MemberExpression",
-                            "start": 9315,
-                            "end": 9326,
+                            "start": 9324,
+                            "end": 9335,
                             "loc": {
                               "start": {
                                 "line": 193,
@@ -14212,8 +14212,8 @@
                             },
                             "object": {
                               "type": "ThisExpression",
-                              "start": 9315,
-                              "end": 9319,
+                              "start": 9324,
+                              "end": 9328,
                               "loc": {
                                 "start": {
                                   "line": 193,
@@ -14227,8 +14227,8 @@
                             },
                             "property": {
                               "type": "Identifier",
-                              "start": 9320,
-                              "end": 9326,
+                              "start": 9329,
+                              "end": 9335,
                               "loc": {
                                 "start": {
                                   "line": 193,
@@ -14246,8 +14246,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 9327,
-                            "end": 9332,
+                            "start": 9336,
+                            "end": 9341,
                             "loc": {
                               "start": {
                                 "line": 193,
@@ -14265,8 +14265,8 @@
                         },
                         "right": {
                           "type": "Identifier",
-                          "start": 9335,
-                          "end": 9340,
+                          "start": 9344,
+                          "end": 9349,
                           "loc": {
                             "start": {
                               "line": 193,
@@ -14284,8 +14284,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 9350,
-                      "end": 9378,
+                      "start": 9359,
+                      "end": 9387,
                       "loc": {
                         "start": {
                           "line": 194,
@@ -14298,8 +14298,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 9350,
-                        "end": 9377,
+                        "start": 9359,
+                        "end": 9386,
                         "loc": {
                           "start": {
                             "line": 194,
@@ -14313,8 +14313,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 9350,
-                          "end": 9368,
+                          "start": 9359,
+                          "end": 9377,
                           "loc": {
                             "start": {
                               "line": 194,
@@ -14327,8 +14327,8 @@
                           },
                           "object": {
                             "type": "MemberExpression",
-                            "start": 9350,
-                            "end": 9361,
+                            "start": 9359,
+                            "end": 9370,
                             "loc": {
                               "start": {
                                 "line": 194,
@@ -14341,8 +14341,8 @@
                             },
                             "object": {
                               "type": "ThisExpression",
-                              "start": 9350,
-                              "end": 9354,
+                              "start": 9359,
+                              "end": 9363,
                               "loc": {
                                 "start": {
                                   "line": 194,
@@ -14356,8 +14356,8 @@
                             },
                             "property": {
                               "type": "Identifier",
-                              "start": 9355,
-                              "end": 9361,
+                              "start": 9364,
+                              "end": 9370,
                               "loc": {
                                 "start": {
                                   "line": 194,
@@ -14375,8 +14375,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 9362,
-                            "end": 9368,
+                            "start": 9371,
+                            "end": 9377,
                             "loc": {
                               "start": {
                                 "line": 194,
@@ -14394,8 +14394,8 @@
                         },
                         "right": {
                           "type": "Identifier",
-                          "start": 9371,
-                          "end": 9377,
+                          "start": 9380,
+                          "end": 9386,
                           "loc": {
                             "start": {
                               "line": 194,
@@ -14418,9 +14418,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n     * Updates the bounds of the rectangle this icon point exists inside/outside of.\n     * @param pBounds - The bounds to update the rectangle with.\n     * @prop {number} pBounds.width - The width of the new rectangle.\n     * @prop {number} pBounds.height - The height of the new rectangle.\n     ",
+                    "value": "*\n     * Updates the bounds of the rectangle this icon point exists inside/outside of.\n     * @param {Bounds} pBounds - The bounds to update the rectangle with.\n     * @prop {number} pBounds.width - The width of the new rectangle.\n     * @prop {number} pBounds.height - The height of the new rectangle.\n     ",
                     "start": 8932,
-                    "end": 9235,
+                    "end": 9244,
                     "loc": {
                       "start": {
                         "line": 185,
@@ -14436,9 +14436,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n     * Changes the icon point position.\n     * @param pPoint - The point to update this icon point with.\n     * @prop {number} pPoint.x - The x coordinate of the point inside/outside the rectangle.\n     * @prop {number} pPoint.y - The y coordinate of the point inside/outside the rectangle.\n     * @prop {boolean} [pPoint.isNormalized] - If the point's value is normalized.\n     ",
-                    "start": 9389,
-                    "end": 9774,
+                    "value": "*\n     * Changes the icon point position.\n     * @param {PositionalPoint} pPoint - The point to update this icon point with.\n     * @prop {number} pPoint.x - The x coordinate of the point inside/outside the rectangle.\n     * @prop {number} pPoint.y - The y coordinate of the point inside/outside the rectangle.\n     * @prop {boolean} [pPoint.isNormalized] - If the point's value is normalized.\n     ",
+                    "start": 9398,
+                    "end": 9801,
                     "loc": {
                       "start": {
                         "line": 196,
@@ -14454,8 +14454,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 9779,
-                "end": 9837,
+                "start": 9806,
+                "end": 9864,
                 "loc": {
                   "start": {
                     "line": 203,
@@ -14470,8 +14470,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 9779,
-                  "end": 9790,
+                  "start": 9806,
+                  "end": 9817,
                   "loc": {
                     "start": {
                       "line": 203,
@@ -14494,8 +14494,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 9791,
-                    "end": 9797,
+                    "start": 9818,
+                    "end": 9824,
                     "loc": {
                       "start": {
                         "line": 203,
@@ -14512,8 +14512,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 9799,
-                  "end": 9837,
+                  "start": 9826,
+                  "end": 9864,
                   "loc": {
                     "start": {
                       "line": 203,
@@ -14527,8 +14527,8 @@
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 9809,
-                      "end": 9831,
+                      "start": 9836,
+                      "end": 9858,
                       "loc": {
                         "start": {
                           "line": 204,
@@ -14541,8 +14541,8 @@
                       },
                       "expression": {
                         "type": "CallExpression",
-                        "start": 9809,
-                        "end": 9830,
+                        "start": 9836,
+                        "end": 9857,
                         "loc": {
                           "start": {
                             "line": 204,
@@ -14555,8 +14555,8 @@
                         },
                         "callee": {
                           "type": "MemberExpression",
-                          "start": 9809,
-                          "end": 9822,
+                          "start": 9836,
+                          "end": 9849,
                           "loc": {
                             "start": {
                               "line": 204,
@@ -14569,8 +14569,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 9809,
-                            "end": 9813,
+                            "start": 9836,
+                            "end": 9840,
                             "loc": {
                               "start": {
                                 "line": 204,
@@ -14584,8 +14584,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 9814,
-                            "end": 9822,
+                            "start": 9841,
+                            "end": 9849,
                             "loc": {
                               "start": {
                                 "line": 204,
@@ -14604,8 +14604,8 @@
                         "arguments": [
                           {
                             "type": "Identifier",
-                            "start": 9823,
-                            "end": 9829,
+                            "start": 9850,
+                            "end": 9856,
                             "loc": {
                               "start": {
                                 "line": 204,
@@ -14628,9 +14628,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n     * Changes the icon point position.\n     * @param pPoint - The point to update this icon point with.\n     * @prop {number} pPoint.x - The x coordinate of the point inside/outside the rectangle.\n     * @prop {number} pPoint.y - The y coordinate of the point inside/outside the rectangle.\n     * @prop {boolean} [pPoint.isNormalized] - If the point's value is normalized.\n     ",
-                    "start": 9389,
-                    "end": 9774,
+                    "value": "*\n     * Changes the icon point position.\n     * @param {PositionalPoint} pPoint - The point to update this icon point with.\n     * @prop {number} pPoint.x - The x coordinate of the point inside/outside the rectangle.\n     * @prop {number} pPoint.y - The y coordinate of the point inside/outside the rectangle.\n     * @prop {boolean} [pPoint.isNormalized] - If the point's value is normalized.\n     ",
+                    "start": 9398,
+                    "end": 9801,
                     "loc": {
                       "start": {
                         "line": 196,
@@ -14649,7 +14649,7 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "!\n * icon-point@1.0.0 https://github.com/EvitcaStudio/IconPoint\n * Compiled Mon, 18 Nov 2024 12:34:38 UTC\n *\n * icon-point is licensed under the MIT License.\n * http://www.opensource.org/licenses/mit-license\n ",
+              "value": "!\n * icon-point@1.1.0 https://github.com/EvitcaStudio/IconPoint\n * Compiled Mon, 18 Nov 2024 12:47:20 UTC\n *\n * icon-point is licensed under the MIT License.\n * http://www.opensource.org/licenses/mit-license\n ",
               "start": 0,
               "end": 213,
               "loc": {
@@ -14701,8 +14701,8 @@
             {
               "type": "CommentLine",
               "value": "# sourceMappingURL=icon-point.mjs.map",
-              "start": 9863,
-              "end": 9902,
+              "start": 9890,
+              "end": 9929,
               "loc": {
                 "start": {
                   "line": 209,
@@ -14722,8 +14722,8 @@
           {
             "type": "CommentLine",
             "value": "# sourceMappingURL=icon-point.mjs.map",
-            "start": 9863,
-            "end": 9902,
+            "start": 9890,
+            "end": 9929,
             "loc": {
               "start": {
                 "line": 209,
@@ -14744,7 +14744,7 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "!\n * icon-point@1.0.0 https://github.com/EvitcaStudio/IconPoint\n * Compiled Mon, 18 Nov 2024 12:34:38 UTC\n *\n * icon-point is licensed under the MIT License.\n * http://www.opensource.org/licenses/mit-license\n ",
+      "value": "!\n * icon-point@1.1.0 https://github.com/EvitcaStudio/IconPoint\n * Compiled Mon, 18 Nov 2024 12:47:20 UTC\n *\n * icon-point is licensed under the MIT License.\n * http://www.opensource.org/licenses/mit-license\n ",
       "start": 0,
       "end": 213,
       "loc": {
@@ -15096,9 +15096,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Updates the bounds of the rectangle this icon point exists inside/outside of.\n     * @param pBounds - The bounds to update the rectangle with.\n     * @prop {number} pBounds.width - The width of the new rectangle.\n     * @prop {number} pBounds.height - The height of the new rectangle.\n     ",
+      "value": "*\n     * Updates the bounds of the rectangle this icon point exists inside/outside of.\n     * @param {Bounds} pBounds - The bounds to update the rectangle with.\n     * @prop {number} pBounds.width - The width of the new rectangle.\n     * @prop {number} pBounds.height - The height of the new rectangle.\n     ",
       "start": 8932,
-      "end": 9235,
+      "end": 9244,
       "loc": {
         "start": {
           "line": 185,
@@ -15112,9 +15112,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Changes the icon point position.\n     * @param pPoint - The point to update this icon point with.\n     * @prop {number} pPoint.x - The x coordinate of the point inside/outside the rectangle.\n     * @prop {number} pPoint.y - The y coordinate of the point inside/outside the rectangle.\n     * @prop {boolean} [pPoint.isNormalized] - If the point's value is normalized.\n     ",
-      "start": 9389,
-      "end": 9774,
+      "value": "*\n     * Changes the icon point position.\n     * @param {PositionalPoint} pPoint - The point to update this icon point with.\n     * @prop {number} pPoint.x - The x coordinate of the point inside/outside the rectangle.\n     * @prop {number} pPoint.y - The y coordinate of the point inside/outside the rectangle.\n     * @prop {boolean} [pPoint.isNormalized] - If the point's value is normalized.\n     ",
+      "start": 9398,
+      "end": 9801,
       "loc": {
         "start": {
           "line": 196,
@@ -15129,8 +15129,8 @@
     {
       "type": "CommentLine",
       "value": "# sourceMappingURL=icon-point.mjs.map",
-      "start": 9863,
-      "end": 9902,
+      "start": 9890,
+      "end": 9929,
       "loc": {
         "start": {
           "line": 209,
@@ -15146,7 +15146,7 @@
   "tokens": [
     {
       "type": "CommentBlock",
-      "value": "!\n * icon-point@1.0.0 https://github.com/EvitcaStudio/IconPoint\n * Compiled Mon, 18 Nov 2024 12:34:38 UTC\n *\n * icon-point is licensed under the MIT License.\n * http://www.opensource.org/licenses/mit-license\n ",
+      "value": "!\n * icon-point@1.1.0 https://github.com/EvitcaStudio/IconPoint\n * Compiled Mon, 18 Nov 2024 12:47:20 UTC\n *\n * icon-point is licensed under the MIT License.\n * http://www.opensource.org/licenses/mit-license\n ",
       "start": 0,
       "end": 213,
       "loc": {
@@ -16063,7 +16063,7 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "1.0.0",
+      "value": "1.1.0",
       "start": 1502,
       "end": 1509,
       "loc": {
@@ -26070,9 +26070,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Updates the bounds of the rectangle this icon point exists inside/outside of.\n     * @param pBounds - The bounds to update the rectangle with.\n     * @prop {number} pBounds.width - The width of the new rectangle.\n     * @prop {number} pBounds.height - The height of the new rectangle.\n     ",
+      "value": "*\n     * Updates the bounds of the rectangle this icon point exists inside/outside of.\n     * @param {Bounds} pBounds - The bounds to update the rectangle with.\n     * @prop {number} pBounds.width - The width of the new rectangle.\n     * @prop {number} pBounds.height - The height of the new rectangle.\n     ",
       "start": 8932,
-      "end": 9235,
+      "end": 9244,
       "loc": {
         "start": {
           "line": 185,
@@ -26097,8 +26097,8 @@
         "binop": null
       },
       "value": "updateBounds",
-      "start": 9240,
-      "end": 9252,
+      "start": 9249,
+      "end": 9261,
       "loc": {
         "start": {
           "line": 191,
@@ -26122,8 +26122,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9252,
-      "end": 9253,
+      "start": 9261,
+      "end": 9262,
       "loc": {
         "start": {
           "line": 191,
@@ -26148,8 +26148,8 @@
         "binop": null
       },
       "value": "pBounds",
-      "start": 9253,
-      "end": 9260,
+      "start": 9262,
+      "end": 9269,
       "loc": {
         "start": {
           "line": 191,
@@ -26173,8 +26173,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9260,
-      "end": 9261,
+      "start": 9269,
+      "end": 9270,
       "loc": {
         "start": {
           "line": 191,
@@ -26198,8 +26198,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9262,
-      "end": 9263,
+      "start": 9271,
+      "end": 9272,
       "loc": {
         "start": {
           "line": 191,
@@ -26226,8 +26226,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 9272,
-      "end": 9277,
+      "start": 9281,
+      "end": 9286,
       "loc": {
         "start": {
           "line": 192,
@@ -26251,8 +26251,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9278,
-      "end": 9279,
+      "start": 9287,
+      "end": 9288,
       "loc": {
         "start": {
           "line": 192,
@@ -26277,8 +26277,8 @@
         "binop": null
       },
       "value": "width",
-      "start": 9280,
-      "end": 9285,
+      "start": 9289,
+      "end": 9294,
       "loc": {
         "start": {
           "line": 192,
@@ -26303,8 +26303,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 9285,
-      "end": 9286,
+      "start": 9294,
+      "end": 9295,
       "loc": {
         "start": {
           "line": 192,
@@ -26329,8 +26329,8 @@
         "binop": null
       },
       "value": "height",
-      "start": 9287,
-      "end": 9293,
+      "start": 9296,
+      "end": 9302,
       "loc": {
         "start": {
           "line": 192,
@@ -26354,8 +26354,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9294,
-      "end": 9295,
+      "start": 9303,
+      "end": 9304,
       "loc": {
         "start": {
           "line": 192,
@@ -26381,8 +26381,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 9296,
-      "end": 9297,
+      "start": 9305,
+      "end": 9306,
       "loc": {
         "start": {
           "line": 192,
@@ -26407,8 +26407,8 @@
         "binop": null
       },
       "value": "pBounds",
-      "start": 9298,
-      "end": 9305,
+      "start": 9307,
+      "end": 9314,
       "loc": {
         "start": {
           "line": 192,
@@ -26433,8 +26433,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 9305,
-      "end": 9306,
+      "start": 9314,
+      "end": 9315,
       "loc": {
         "start": {
           "line": 192,
@@ -26461,8 +26461,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 9315,
-      "end": 9319,
+      "start": 9324,
+      "end": 9328,
       "loc": {
         "start": {
           "line": 193,
@@ -26487,8 +26487,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 9319,
-      "end": 9320,
+      "start": 9328,
+      "end": 9329,
       "loc": {
         "start": {
           "line": 193,
@@ -26513,8 +26513,8 @@
         "binop": null
       },
       "value": "bounds",
-      "start": 9320,
-      "end": 9326,
+      "start": 9329,
+      "end": 9335,
       "loc": {
         "start": {
           "line": 193,
@@ -26539,8 +26539,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 9326,
-      "end": 9327,
+      "start": 9335,
+      "end": 9336,
       "loc": {
         "start": {
           "line": 193,
@@ -26565,8 +26565,8 @@
         "binop": null
       },
       "value": "width",
-      "start": 9327,
-      "end": 9332,
+      "start": 9336,
+      "end": 9341,
       "loc": {
         "start": {
           "line": 193,
@@ -26592,8 +26592,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 9333,
-      "end": 9334,
+      "start": 9342,
+      "end": 9343,
       "loc": {
         "start": {
           "line": 193,
@@ -26618,8 +26618,8 @@
         "binop": null
       },
       "value": "width",
-      "start": 9335,
-      "end": 9340,
+      "start": 9344,
+      "end": 9349,
       "loc": {
         "start": {
           "line": 193,
@@ -26644,8 +26644,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 9340,
-      "end": 9341,
+      "start": 9349,
+      "end": 9350,
       "loc": {
         "start": {
           "line": 193,
@@ -26672,8 +26672,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 9350,
-      "end": 9354,
+      "start": 9359,
+      "end": 9363,
       "loc": {
         "start": {
           "line": 194,
@@ -26698,8 +26698,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 9354,
-      "end": 9355,
+      "start": 9363,
+      "end": 9364,
       "loc": {
         "start": {
           "line": 194,
@@ -26724,8 +26724,8 @@
         "binop": null
       },
       "value": "bounds",
-      "start": 9355,
-      "end": 9361,
+      "start": 9364,
+      "end": 9370,
       "loc": {
         "start": {
           "line": 194,
@@ -26750,8 +26750,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 9361,
-      "end": 9362,
+      "start": 9370,
+      "end": 9371,
       "loc": {
         "start": {
           "line": 194,
@@ -26776,8 +26776,8 @@
         "binop": null
       },
       "value": "height",
-      "start": 9362,
-      "end": 9368,
+      "start": 9371,
+      "end": 9377,
       "loc": {
         "start": {
           "line": 194,
@@ -26803,8 +26803,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 9369,
-      "end": 9370,
+      "start": 9378,
+      "end": 9379,
       "loc": {
         "start": {
           "line": 194,
@@ -26829,8 +26829,8 @@
         "binop": null
       },
       "value": "height",
-      "start": 9371,
-      "end": 9377,
+      "start": 9380,
+      "end": 9386,
       "loc": {
         "start": {
           "line": 194,
@@ -26855,8 +26855,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 9377,
-      "end": 9378,
+      "start": 9386,
+      "end": 9387,
       "loc": {
         "start": {
           "line": 194,
@@ -26880,8 +26880,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9383,
-      "end": 9384,
+      "start": 9392,
+      "end": 9393,
       "loc": {
         "start": {
           "line": 195,
@@ -26895,9 +26895,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Changes the icon point position.\n     * @param pPoint - The point to update this icon point with.\n     * @prop {number} pPoint.x - The x coordinate of the point inside/outside the rectangle.\n     * @prop {number} pPoint.y - The y coordinate of the point inside/outside the rectangle.\n     * @prop {boolean} [pPoint.isNormalized] - If the point's value is normalized.\n     ",
-      "start": 9389,
-      "end": 9774,
+      "value": "*\n     * Changes the icon point position.\n     * @param {PositionalPoint} pPoint - The point to update this icon point with.\n     * @prop {number} pPoint.x - The x coordinate of the point inside/outside the rectangle.\n     * @prop {number} pPoint.y - The y coordinate of the point inside/outside the rectangle.\n     * @prop {boolean} [pPoint.isNormalized] - If the point's value is normalized.\n     ",
+      "start": 9398,
+      "end": 9801,
       "loc": {
         "start": {
           "line": 196,
@@ -26922,8 +26922,8 @@
         "binop": null
       },
       "value": "updatePoint",
-      "start": 9779,
-      "end": 9790,
+      "start": 9806,
+      "end": 9817,
       "loc": {
         "start": {
           "line": 203,
@@ -26947,8 +26947,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9790,
-      "end": 9791,
+      "start": 9817,
+      "end": 9818,
       "loc": {
         "start": {
           "line": 203,
@@ -26973,8 +26973,8 @@
         "binop": null
       },
       "value": "pPoint",
-      "start": 9791,
-      "end": 9797,
+      "start": 9818,
+      "end": 9824,
       "loc": {
         "start": {
           "line": 203,
@@ -26998,8 +26998,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9797,
-      "end": 9798,
+      "start": 9824,
+      "end": 9825,
       "loc": {
         "start": {
           "line": 203,
@@ -27023,8 +27023,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9799,
-      "end": 9800,
+      "start": 9826,
+      "end": 9827,
       "loc": {
         "start": {
           "line": 203,
@@ -27051,8 +27051,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 9809,
-      "end": 9813,
+      "start": 9836,
+      "end": 9840,
       "loc": {
         "start": {
           "line": 204,
@@ -27077,8 +27077,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 9813,
-      "end": 9814,
+      "start": 9840,
+      "end": 9841,
       "loc": {
         "start": {
           "line": 204,
@@ -27103,8 +27103,8 @@
         "binop": null
       },
       "value": "setPoint",
-      "start": 9814,
-      "end": 9822,
+      "start": 9841,
+      "end": 9849,
       "loc": {
         "start": {
           "line": 204,
@@ -27128,8 +27128,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9822,
-      "end": 9823,
+      "start": 9849,
+      "end": 9850,
       "loc": {
         "start": {
           "line": 204,
@@ -27154,8 +27154,8 @@
         "binop": null
       },
       "value": "pPoint",
-      "start": 9823,
-      "end": 9829,
+      "start": 9850,
+      "end": 9856,
       "loc": {
         "start": {
           "line": 204,
@@ -27179,8 +27179,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9829,
-      "end": 9830,
+      "start": 9856,
+      "end": 9857,
       "loc": {
         "start": {
           "line": 204,
@@ -27205,8 +27205,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 9830,
-      "end": 9831,
+      "start": 9857,
+      "end": 9858,
       "loc": {
         "start": {
           "line": 204,
@@ -27230,8 +27230,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9836,
-      "end": 9837,
+      "start": 9863,
+      "end": 9864,
       "loc": {
         "start": {
           "line": 205,
@@ -27255,8 +27255,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9838,
-      "end": 9839,
+      "start": 9865,
+      "end": 9866,
       "loc": {
         "start": {
           "line": 206,
@@ -27283,8 +27283,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 9841,
-      "end": 9847,
+      "start": 9868,
+      "end": 9874,
       "loc": {
         "start": {
           "line": 208,
@@ -27308,8 +27308,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9848,
-      "end": 9849,
+      "start": 9875,
+      "end": 9876,
       "loc": {
         "start": {
           "line": 208,
@@ -27334,8 +27334,8 @@
         "binop": null
       },
       "value": "IconPoint",
-      "start": 9850,
-      "end": 9859,
+      "start": 9877,
+      "end": 9886,
       "loc": {
         "start": {
           "line": 208,
@@ -27359,8 +27359,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9860,
-      "end": 9861,
+      "start": 9887,
+      "end": 9888,
       "loc": {
         "start": {
           "line": 208,
@@ -27385,8 +27385,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 9861,
-      "end": 9862,
+      "start": 9888,
+      "end": 9889,
       "loc": {
         "start": {
           "line": 208,
@@ -27401,8 +27401,8 @@
     {
       "type": "CommentLine",
       "value": "# sourceMappingURL=icon-point.mjs.map",
-      "start": 9863,
-      "end": 9902,
+      "start": 9890,
+      "end": 9929,
       "loc": {
         "start": {
           "line": 209,
@@ -27427,8 +27427,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 9903,
-      "end": 9903,
+      "start": 9930,
+      "end": 9930,
       "loc": {
         "start": {
           "line": 210,

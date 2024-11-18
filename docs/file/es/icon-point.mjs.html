@@ -36,8 +36,8 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">es/icon-point.mjs</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/*!
- * icon-point@1.0.0 https://github.com/EvitcaStudio/IconPoint
- * Compiled Mon, 18 Nov 2024 12:34:38 UTC
+ * icon-point@1.1.0 https://github.com/EvitcaStudio/IconPoint
+ * Compiled Mon, 18 Nov 2024 12:47:20 UTC
  *
  * icon-point is licensed under the MIT License.
  * http://www.opensource.org/licenses/mit-license
@@ -75,7 +75,7 @@ class IconPoint {
     /**
      * The version of the module.
      */
-    version = &quot;1.0.0&quot;;
+    version = &quot;1.1.0&quot;;
     /** The logger module this module uses to log errors / logs
      * @private
      * @type {Logger}
@@ -221,7 +221,7 @@ class IconPoint {
     }
     /**
      * Updates the bounds of the rectangle this icon point exists inside/outside of.
-     * @param pBounds - The bounds to update the rectangle with.
+     * @param {Bounds} pBounds - The bounds to update the rectangle with.
      * @prop {number} pBounds.width - The width of the new rectangle.
      * @prop {number} pBounds.height - The height of the new rectangle.
      */
@@ -232,7 +232,7 @@ class IconPoint {
     }
     /**
      * Changes the icon point position.
-     * @param pPoint - The point to update this icon point with.
+     * @param {PositionalPoint} pPoint - The point to update this icon point with.
      * @prop {number} pPoint.x - The x coordinate of the point inside/outside the rectangle.
      * @prop {number} pPoint.y - The y coordinate of the point inside/outside the rectangle.
      * @prop {boolean} [pPoint.isNormalized] - If the point&apos;s value is normalized.
