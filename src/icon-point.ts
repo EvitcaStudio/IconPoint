@@ -200,7 +200,7 @@ export class IconPoint {
     }
     /**
      * Updates the bounds of the rectangle this icon point exists inside/outside of.
-     * @param pBounds - The bounds to update the rectangle with.
+     * @param {Bounds} pBounds - The bounds to update the rectangle with.
      * @prop {number} pBounds.width - The width of the new rectangle.
      * @prop {number} pBounds.height - The height of the new rectangle.
      */
@@ -211,7 +211,7 @@ export class IconPoint {
     }
     /**
      * Changes the icon point position.
-     * @param pPoint - The point to update this icon point with.
+     * @param {PositionalPoint} pPoint - The point to update this icon point with.
      * @prop {number} pPoint.x - The x coordinate of the point inside/outside the rectangle. 
      * @prop {number} pPoint.y - The y coordinate of the point inside/outside the rectangle. 
      * @prop {boolean} [pPoint.isNormalized] - If the point's value is normalized. 
