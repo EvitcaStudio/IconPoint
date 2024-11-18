@@ -37,7 +37,7 @@
 <div class="content" data-ice="content"><h1 data-ice="title">es/icon-point.mjs</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/*!
  * icon-point@1.0.0 https://github.com/EvitcaStudio/IconPoint
- * Compiled Sun, 17 Nov 2024 16:33:36 UTC
+ * Compiled Mon, 18 Nov 2024 12:34:38 UTC
  *
  * icon-point is licensed under the MIT License.
  * http://www.opensource.org/licenses/mit-license
@@ -50,7 +50,6 @@
  * 
  * Copyright 2024, Evitca Studio, All Rights Reserved
  */
-
 /**
  * The IconPoint class
  * A point that exists inside/outside a virtual rectangle. The point&apos;s position inside/outside of the rectangle is maintained when the rectangle is rotated.
@@ -60,7 +59,7 @@
  * // Make the dimensions of the rectangle 100x50
  * const bounds = { width: 100, height: 50 };
  * // Create a point at the top left corner of the rectangle
- * const point = { x: 1, y: 1, useRawPixels: true };
+ * const point = { x: 1, y: 1 };
  * // Create an icon point that will track the point on this rectangle when it moves/rotates
  * const tlPoint = new IconPoint(rectangle, bounds, point);
  */
@@ -83,88 +82,84 @@ class IconPoint {
      */
     logger;
     /**
-     * An object storing the raw pixel position
+     * An object storing the position of the point that was set. This is the point on the rectangle.
+     * It can be changed at runtime.
+     *   ________
+     *  |       |
+     *  |   x   |
+     *  |       |
+     *  |_______|
      * @private
-     * @type {PositionalPoint}
+     * @type {Point}
      * @prop {number} x - The raw x pixel position of this point
      * @prop {number} y - The raw y pixel position of this point
      */
-    rawPixelsPoint = { x: 0, y: 0 };
+    iconPoint = { x: 0, y: 0 };
     /**
-     * An object storing the position of the rectangle
+     * An object storing the position of the rectangle.
      * @private
-     * @type {PositionalPoint}
-     * @prop {number} x - The x position of the rectangle
-     * @prop {number} y - The y position of the rectangle
+     * @type {Point}
+     * @prop {number} x - The x position of the rectangle.
+     * @prop {number} y - The y position of the rectangle.
      */
-    positionalPoint = null;
+    positionalPoint;
     /**
      * An object storing the point&apos;s position with rotation taken into account.
      * @private
-     * @type {PositionalPoint}
-     * @prop {number} x - The x position of the rectangle
-     * @prop {number} y - The y position of the rectangle
+     * @type {Point}
+     * @prop {number} x - The x position of the point after rotation is applied.
+     * @prop {number} y - The y position of the point after rotation is applied.
      */
     point = { x: 0, y: 0 };
     /**
      * An object storing the rectangle&apos;s size.
      * @private
      * @type {Bounds}
-     * @prop {number} width - The width of the rectangle
-     * @prop {number} height - The height of the rectangle
+     * @prop {number} width - The width of the rectangle.
+     * @prop {number} height - The height of the rectangle.
      */
     bounds = { width: 32, height: 32 };
     /**
-     * @param {PositionalPoint} pPoint - The rectangle this icon point exists inside/outside of
-     * @prop {number} pPoint.x - The x coordinate of the rectangle
-     * @prop {number} pPoint.y - The y coordinate of the rectangle
-     * @param {Bounds} pBounds - The size of the rectangle
-     * @prop {number} pBounds.width - The width of the rectangle
-     * @prop {number} pBounds.height - The height of the rectangle
-     * @param {PositionalPoint} pIconPoint - The point that exists inside/outside the rectangle. This is in relative positioning to the rectangle
-     * @prop {number} pIconPoint.x - The x coordinate of the point inside/outside the rectangle
-     * @prop {number} pIconPoint.y - The y coordinate of the point inside/outside the rectangle
-     * @prop {boolean} [pIconPoint.useRawPixels=false] - Whether or not this point is defined in raw pixels or in a normalized 0-1 range
+     * @param {Point} pPoint - The rectangle this icon point exists inside/outside of.
+     * @prop {number} pPoint.x - The x coordinate of the rectangle.
+     * @prop {number} pPoint.y - The y coordinate of the rectangle.
+     * @param {Bounds} pBounds - The size of the rectangle.
+     * @prop {number} pBounds.width - The width of the rectangle.
+     * @prop {number} pBounds.height - The height of the rectangle.
+     * @param {PositionalPoint} pIconPoint - The point that exists inside/outside the rectangle. This is in relative positioning to the rectangle.
+     * @prop {number} pIconPoint.x - The x coordinate of the point inside/outside the rectangle.
+     * @prop {number} pIconPoint.y - The y coordinate of the point inside/outside the rectangle.
+     * @prop {boolean} [pIconPoint.isNormalized=false] - Whether or not this point is normalized in a 0-1 range.
+     *
+     * ## Normalized
+        If you want to specify the point `(50, 50)` in a rectangle that is `100x100` using normalized values you would use `0.5`
+        The calculation will be `0.5 * 100` in both axis, which resolves to `(50, 50)`. This is just an easier way to assign the values.
      */
     constructor(pPoint, pBounds, pIconPoint) {
-        // Check if the rectangle is a valid type
-        if (typeof pPoint === &apos;object&apos; &amp;&amp; typeof pBounds === &apos;object&apos; &amp;&amp; pBounds.constructor === Object) {
-            // Check if the rectangle has valid properties (x,y,width,height)
-            if (typeof pPoint.x === &apos;number&apos; &amp;&amp; typeof pPoint.y === &apos;number&apos; &amp;&amp; typeof pBounds.width === &apos;number&apos; &amp;&amp; typeof pBounds.height === &apos;number&apos;) {
-                this.positionalPoint = pPoint;
-                this.bounds.width = pBounds.width;
-                this.bounds.height = pBounds.height;
-            }
-            else {
-                this.logger.prefix(&apos;Icon-Point-Module&apos;).error(&apos;Invalid properties on pPoint or pBounds!&apos;);
-            }
-        }
-        // Check if the point is a valid type
-        if (typeof pIconPoint === &apos;object&apos; &amp;&amp; pIconPoint.constructor === Object) {
-            // Check if the point has valid properties
-            if (typeof pIconPoint.x === &apos;number&apos; &amp;&amp; typeof pIconPoint.y === &apos;number&apos;) {
-                this.setPoint(pIconPoint);
-            }
-            else {
-                this.logger.prefix(&apos;Icon-Point-Module&apos;).error(&apos;Parameter of wrong type: pPoint.point.x or pPoint.point.y is not a number!&apos;);
-            }
-        }
+        const { width, height } = pBounds;
+        this.bounds.width = width;
+        this.bounds.height = height;
+        this.positionalPoint = pPoint;
+        this.setPoint(pIconPoint);
         this.logger = new i();
         this.logger.registerType(&apos;Icon-Point-Module&apos;, &apos;#ff6600&apos;);
     }
     /**
-     * Gets the new point&apos;s position inside a rectangle after taking pAngle into account
-     * @param {number} [pAngle=0] - Rotation of the rectangle this point exists inside/outside of in radians
-     * @param {Offset} [pOffset={ x: 0, y: 0 }] - The offset of the rectangle
-     * @prop {number} pOffset.x - The x offset of the rectangle
-     * @prop {number} pOffset.y - The y offset of the rectangle
+     * Gets the new point&apos;s position inside a rectangle after taking pAngle into account.
+     * @param {number} [pAngle=0] - Rotation of the rectangle this point exists inside/outside of in radians.
+     * @param {Offset} [pOffset={ x: 0, y: 0 }] - The offset of the rectangle.
+     * @prop {number} pOffset.x - The x offset of the rectangle.
+     * @prop {number} pOffset.y - The y offset of the rectangle.
+     * @param {Anchor} [pAnchor={ x: 0.5, y: 0.5}] - The anchor origin of the rectangle.
+     * @prop {number} pAnchor.x - The x anchor of the rectangle.
+     * @prop {number} pAnchor.y - The y anchor of the rectangle.
      * @example &lt;caption&gt;Example usage of this method&lt;/caption&gt;
      * // Create a rectangle at the position of (0,0)
      * const rectangle = { x: 0, y: 0 };
      * // Make the dimensions of the rectangle 100x50
      * const bounds = { width: 100, height: 50 };
      * // Create a point at the top left corner of the rectangle
-     * const point = { x: 1, y: 1, useRawPixels: true };
+     * const point = { x: 1, y: 1 };
      * // Create an icon point that will track the point on this rectangle when it moves/rotates
      * const tlPoint = new IconPoint(rectangle, bounds, point);
      *
@@ -189,8 +184,6 @@ class IconPoint {
      * @returns {object} The point inside/outside of the rectangle after rotating.
      */
     getPoint(pAngle = 0, pOffset = IconPoint.defaultOffset, pAnchor = IconPoint.defaultAnchor) {
-        if (!this.positionalPoint)
-            return;
         // cx, cy - center of square coordinates 
         // x, y - coordinates of a corner point of the square
         // angle is the angle of rotation
@@ -198,8 +191,8 @@ class IconPoint {
         const cy = (this.positionalPoint.y + pOffset.y) + this.bounds.height * pAnchor.y;
         // We take away 1 from the position of the rectangle because we don&apos;t want to point to start inside the boundaries of the rectangle
         // Otherwise we would have to use 0 to (rectangle.xy-1) for the points coordinates
-        const pointX = (this.positionalPoint.x + pOffset.x - 1) + this.rawPixelsPoint.x;
-        const pointY = (this.positionalPoint.y + pOffset.y - 1) + this.rawPixelsPoint.y;
+        const pointX = (this.positionalPoint.x + pOffset.x - 1) + this.iconPoint.x;
+        const pointY = (this.positionalPoint.y + pOffset.y - 1) + this.iconPoint.y;
         // translate point to origin
         const tempX = pointX - cx;
         const tempY = pointY - cy;
@@ -216,13 +209,36 @@ class IconPoint {
     /**
      * Sets the static point and defines the raw pixels value
      * @private
-     * @param {PositionalPoint} pPoint - The point that exists inside/outside the rectangle
-     * @prop {number} pPoint.x - The x coordinate of the point inside/outside the rectangle
-     * @prop {number} pPoint.y - The y coordinate of the point inside/outside the rectangle
+     * @param {PositionalPoint} pPoint - The point that exists inside/outside the rectangle.
+     * @prop {number} pPoint.x - The x coordinate of the point inside/outside the rectangle.
+     * @prop {number} pPoint.y - The y coordinate of the point inside/outside the rectangle.
+     * @prop {boolean} [pPoint.isNormalized] - If the point&apos;s value is normalized.
      */
     setPoint(pPoint) {
-        this.rawPixelsPoint.x = pPoint.useRawPixels ? pPoint.x : pPoint.x * this.bounds.width;
-        this.rawPixelsPoint.y = pPoint.useRawPixels ? pPoint.y : pPoint.y * this.bounds.height;
+        const { x, y, isNormalized } = pPoint;
+        this.iconPoint.x = isNormalized ? x * this.bounds.width : x;
+        this.iconPoint.y = isNormalized ? y * this.bounds.height : y;
+    }
+    /**
+     * Updates the bounds of the rectangle this icon point exists inside/outside of.
+     * @param pBounds - The bounds to update the rectangle with.
+     * @prop {number} pBounds.width - The width of the new rectangle.
+     * @prop {number} pBounds.height - The height of the new rectangle.
+     */
+    updateBounds(pBounds) {
+        const { width, height } = pBounds;
+        this.bounds.width = width;
+        this.bounds.height = height;
+    }
+    /**
+     * Changes the icon point position.
+     * @param pPoint - The point to update this icon point with.
+     * @prop {number} pPoint.x - The x coordinate of the point inside/outside the rectangle.
+     * @prop {number} pPoint.y - The y coordinate of the point inside/outside the rectangle.
+     * @prop {boolean} [pPoint.isNormalized] - If the point&apos;s value is normalized.
+     */
+    updatePoint(pPoint) {
+        this.setPoint(pPoint);
     }
 }
 
