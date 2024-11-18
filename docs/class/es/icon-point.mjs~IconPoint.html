@@ -35,13 +35,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {IconPoint} from &apos;<span><a href="file/es/icon-point.mjs.html#lineNumber30">icon-point/es/icon-point.mjs</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {IconPoint} from &apos;<span><a href="file/es/icon-point.mjs.html#lineNumber29">icon-point/es/icon-point.mjs</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/es/icon-point.mjs.html#lineNumber30">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/es/icon-point.mjs.html#lineNumber29">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -78,7 +78,7 @@ const rectangle = { x: 0, y: 0 };
 // Make the dimensions of the rectangle 100x50
 const bounds = { width: 100, height: 50 };
 // Create a point at the top left corner of the rectangle
-const point = { x: 1, y: 1, useRawPixels: true };
+const point = { x: 1, y: 1 };
 // Create an icon point that will track the point on this rectangle when it moves/rotates
 const tlPoint = new IconPoint(rectangle, bounds, point);</code></pre>
     </div>
@@ -173,7 +173,7 @@ const tlPoint = new IconPoint(rectangle, bounds, point);</code></pre>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/es/icon-point.mjs~IconPoint.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(pPoint: <span>PositionalPoint</span>, pBounds: <span>Bounds</span>, pIconPoint: <span>PositionalPoint</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/es/icon-point.mjs~IconPoint.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(pPoint: <span>Point</span>, pBounds: <span>Bounds</span>, pIconPoint: <span>PositionalPoint</span>)</span>
         </p>
       </div>
       <div>
@@ -272,6 +272,35 @@ const tlPoint = new IconPoint(rectangle, bounds, point);</code></pre>
           
           
           
+          <span class="code" data-ice="name"><span><a href="class/es/icon-point.mjs~IconPoint.html#instance-member-iconPoint">iconPoint</a></span></span><span class="code" data-ice="signature">: <span>Point</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>An object storing the position of the point that was set.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">private</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
           <span class="code" data-ice="name"><span><a href="class/es/icon-point.mjs~IconPoint.html#instance-member-logger">logger</a></span></span><span class="code" data-ice="signature">: <span>Logger</span></span>
         </p>
       </div>
@@ -301,7 +330,7 @@ const tlPoint = new IconPoint(rectangle, bounds, point);</code></pre>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/es/icon-point.mjs~IconPoint.html#instance-member-point">point</a></span></span><span class="code" data-ice="signature">: <span>PositionalPoint</span></span>
+          <span class="code" data-ice="name"><span><a href="class/es/icon-point.mjs~IconPoint.html#instance-member-point">point</a></span></span><span class="code" data-ice="signature">: <span>Point</span></span>
         </p>
       </div>
       <div>
@@ -330,42 +359,13 @@ const tlPoint = new IconPoint(rectangle, bounds, point);</code></pre>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/es/icon-point.mjs~IconPoint.html#instance-member-positionalPoint">positionalPoint</a></span></span><span class="code" data-ice="signature">: <span>PositionalPoint</span></span>
+          <span class="code" data-ice="name"><span><a href="class/es/icon-point.mjs~IconPoint.html#instance-member-positionalPoint">positionalPoint</a></span></span><span class="code" data-ice="signature">: <span>Point</span></span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>An object storing the position of the rectangle</p>
-</div>
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">private</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/es/icon-point.mjs~IconPoint.html#instance-member-rawPixelsPoint">rawPixelsPoint</a></span></span><span class="code" data-ice="signature">: <span>PositionalPoint</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>An object storing the raw pixel position</p>
+        <div data-ice="description"><p>An object storing the position of the rectangle.</p>
 </div>
       </div>
     </td>
@@ -395,13 +395,71 @@ const tlPoint = new IconPoint(rectangle, bounds, point);</code></pre>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/es/icon-point.mjs~IconPoint.html#instance-method-getPoint">getPoint</a></span></span><span class="code" data-ice="signature">(pAngle: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, pOffset: <span>Offset</span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/es/icon-point.mjs~IconPoint.html#instance-method-getPoint">getPoint</a></span></span><span class="code" data-ice="signature">(pAngle: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, pOffset: <span>Offset</span>, pAnchor: <span>Anchor</span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span></span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>Gets the new point&apos;s position inside a rectangle after taking pAngle into account</p>
+        <div data-ice="description"><p>Gets the new point&apos;s position inside a rectangle after taking pAngle into account.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/es/icon-point.mjs~IconPoint.html#instance-method-updateBounds">updateBounds</a></span></span><span class="code" data-ice="signature">(pBounds: <span>*</span>)</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Updates the bounds of the rectangle this icon point exists inside/outside of.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/es/icon-point.mjs~IconPoint.html#instance-method-updatePoint">updatePoint</a></span></span><span class="code" data-ice="signature">(pPoint: <span>*</span>)</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Changes the icon point position.</p>
 </div>
       </div>
     </td>
@@ -465,7 +523,7 @@ const tlPoint = new IconPoint(rectangle, bounds, point);</code></pre>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/es/icon-point.mjs.html#lineNumber38">source</a></span></span>
+      <span data-ice="source"><span><a href="file/es/icon-point.mjs.html#lineNumber37">source</a></span></span>
     </span>
   </h3>
 
@@ -509,7 +567,7 @@ const tlPoint = new IconPoint(rectangle, bounds, point);</code></pre>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/es/icon-point.mjs.html#lineNumber34">source</a></span></span>
+      <span data-ice="source"><span><a href="file/es/icon-point.mjs.html#lineNumber33">source</a></span></span>
     </span>
   </h3>
 
@@ -553,11 +611,11 @@ const tlPoint = new IconPoint(rectangle, bounds, point);</code></pre>
     
     
     
-    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(pPoint: <span>PositionalPoint</span>, pBounds: <span>Bounds</span>, pIconPoint: <span>PositionalPoint</span>)</span>
+    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(pPoint: <span>Point</span>, pBounds: <span>Bounds</span>, pIconPoint: <span>PositionalPoint</span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/es/icon-point.mjs.html#lineNumber92">source</a></span></span>
+      <span data-ice="source"><span><a href="file/es/icon-point.mjs.html#lineNumber101">source</a></span></span>
     </span>
   </h3>
 
@@ -578,23 +636,23 @@ const tlPoint = new IconPoint(rectangle, bounds, point);</code></pre>
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">pPoint</td>
-      <td data-ice="type" class="code"><span>PositionalPoint</span></td>
+      <td data-ice="type" class="code"><span>Point</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"><p>The rectangle this icon point exists inside/outside of</p>
+      <td data-ice="description"><p>The rectangle this icon point exists inside/outside of.</p>
 </td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">pBounds</td>
       <td data-ice="type" class="code"><span>Bounds</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"><p>The size of the rectangle</p>
+      <td data-ice="description"><p>The size of the rectangle.</p>
 </td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">pIconPoint</td>
       <td data-ice="type" class="code"><span>PositionalPoint</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"><p>The point that exists inside/outside the rectangle. This is in relative positioning to the rectangle</p>
+      <td data-ice="description"><p>The point that exists inside/outside the rectangle. This is in relative positioning to the rectangle.</p>
 </td>
     </tr>
 </tbody>
@@ -634,7 +692,7 @@ const tlPoint = new IconPoint(rectangle, bounds, point);</code></pre>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/es/icon-point.mjs.html#lineNumber42">source</a></span></span>
+      <span data-ice="source"><span><a href="file/es/icon-point.mjs.html#lineNumber41">source</a></span></span>
     </span>
   </h3>
 
@@ -680,7 +738,7 @@ const tlPoint = new IconPoint(rectangle, bounds, point);</code></pre>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/es/icon-point.mjs.html#lineNumber79">source</a></span></span>
+      <span data-ice="source"><span><a href="file/es/icon-point.mjs.html#lineNumber84">source</a></span></span>
     </span>
   </h3>
 
@@ -688,6 +746,56 @@ const tlPoint = new IconPoint(rectangle, bounds, point);</code></pre>
   
   
   <div data-ice="description"><p>An object storing the rectangle&apos;s size.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-member-iconPoint">
+    <span class="access" data-ice="access">private</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">iconPoint</span><span class="code" data-ice="signature">: <span>Point</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/es/icon-point.mjs.html#lineNumber60">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>An object storing the position of the point that was set. This is the point on the rectangle.
+It can be changed at runtime.</p>
+<hr>
+<p> |       |
+ |   x   |
+ |       |
+ |<strong>___</strong>|</p>
 </div>
 
   
@@ -724,7 +832,7 @@ const tlPoint = new IconPoint(rectangle, bounds, point);</code></pre>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/es/icon-point.mjs.html#lineNumber47">source</a></span></span>
+      <span data-ice="source"><span><a href="file/es/icon-point.mjs.html#lineNumber46">source</a></span></span>
     </span>
   </h3>
 
@@ -764,11 +872,11 @@ const tlPoint = new IconPoint(rectangle, bounds, point);</code></pre>
     
     
     
-    <span class="code" data-ice="name">point</span><span class="code" data-ice="signature">: <span>PositionalPoint</span></span>
+    <span class="code" data-ice="name">point</span><span class="code" data-ice="signature">: <span>Point</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/es/icon-point.mjs.html#lineNumber71">source</a></span></span>
+      <span data-ice="source"><span><a href="file/es/icon-point.mjs.html#lineNumber76">source</a></span></span>
     </span>
   </h3>
 
@@ -808,62 +916,18 @@ const tlPoint = new IconPoint(rectangle, bounds, point);</code></pre>
     
     
     
-    <span class="code" data-ice="name">positionalPoint</span><span class="code" data-ice="signature">: <span>PositionalPoint</span></span>
+    <span class="code" data-ice="name">positionalPoint</span><span class="code" data-ice="signature">: <span>Point</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/es/icon-point.mjs.html#lineNumber63">source</a></span></span>
+      <span data-ice="source"><span><a href="file/es/icon-point.mjs.html#lineNumber68">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  <div data-ice="description"><p>An object storing the position of the rectangle</p>
-</div>
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-member-rawPixelsPoint">
-    <span class="access" data-ice="access">private</span>
-    
-    
-    
-    
-    
-    <span class="code" data-ice="name">rawPixelsPoint</span><span class="code" data-ice="signature">: <span>PositionalPoint</span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/es/icon-point.mjs.html#lineNumber55">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  <div data-ice="description"><p>An object storing the raw pixel position</p>
+  <div data-ice="description"><p>An object storing the position of the rectangle.</p>
 </div>
 
   
@@ -899,18 +963,18 @@ const tlPoint = new IconPoint(rectangle, bounds, point);</code></pre>
     
     
     
-    <span class="code" data-ice="name">getPoint</span><span class="code" data-ice="signature">(pAngle: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, pOffset: <span>Offset</span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span></span>
+    <span class="code" data-ice="name">getPoint</span><span class="code" data-ice="signature">(pAngle: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, pOffset: <span>Offset</span>, pAnchor: <span>Anchor</span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/es/icon-point.mjs.html#lineNumber154">source</a></span></span>
+      <span data-ice="source"><span><a href="file/es/icon-point.mjs.html#lineNumber149">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  <div data-ice="description"><p>Gets the new point&apos;s position inside a rectangle after taking pAngle into account</p>
+  <div data-ice="description"><p>Gets the new point&apos;s position inside a rectangle after taking pAngle into account.</p>
 </div>
 
   
@@ -928,7 +992,7 @@ const tlPoint = new IconPoint(rectangle, bounds, point);</code></pre>
       <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></td>
       <td data-ice="appendix"><ul><li>optional</li>
 <li>default: 0</li></ul></td>
-      <td data-ice="description"><p>Rotation of the rectangle this point exists inside/outside of in radians</p>
+      <td data-ice="description"><p>Rotation of the rectangle this point exists inside/outside of in radians.</p>
 </td>
     </tr>
 <tr data-ice="property" data-depth="0">
@@ -936,7 +1000,15 @@ const tlPoint = new IconPoint(rectangle, bounds, point);</code></pre>
       <td data-ice="type" class="code"><span>Offset</span></td>
       <td data-ice="appendix"><ul><li>optional</li>
 <li>default: { x: 0, y: 0 }</li></ul></td>
-      <td data-ice="description"><p>The offset of the rectangle</p>
+      <td data-ice="description"><p>The offset of the rectangle.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">pAnchor</td>
+      <td data-ice="type" class="code"><span>Anchor</span></td>
+      <td data-ice="appendix"><ul><li>optional</li>
+<li>default: { x: 0.5, y: 0.5}</li></ul></td>
+      <td data-ice="description"><p>The anchor origin of the rectangle.</p>
 </td>
     </tr>
 </tbody>
@@ -977,7 +1049,7 @@ const rectangle = { x: 0, y: 0 };
 // Make the dimensions of the rectangle 100x50
 const bounds = { width: 100, height: 50 };
 // Create a point at the top left corner of the rectangle
-const point = { x: 1, y: 1, useRawPixels: true };
+const point = { x: 1, y: 1 };
 // Create an icon point that will track the point on this rectangle when it moves/rotates
 const tlPoint = new IconPoint(rectangle, bounds, point);
 
@@ -1006,6 +1078,128 @@ console.log(tlPoint.getPoint(angle)) // {x: 200, y: 50.00000000000001} This show
   
   
 </div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-updateBounds">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">updateBounds</span><span class="code" data-ice="signature">(pBounds: <span>*</span>)</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/es/icon-point.mjs.html#lineNumber191">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Updates the bounds of the rectangle this icon point exists inside/outside of.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">pBounds</td>
+      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The bounds to update the rectangle with.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-updatePoint">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">updatePoint</span><span class="code" data-ice="signature">(pPoint: <span>*</span>)</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/es/icon-point.mjs.html#lineNumber203">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Changes the icon point position.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">pPoint</td>
+      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The point to update this icon point with.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
 <h2 data-ice="title">Private Methods</h2>
 
 <div class="detail" data-ice="detail">
@@ -1020,7 +1214,7 @@ console.log(tlPoint.getPoint(angle)) // {x: 200, y: 50.00000000000001} This show
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/es/icon-point.mjs.html#lineNumber186">source</a></span></span>
+      <span data-ice="source"><span><a href="file/es/icon-point.mjs.html#lineNumber180">source</a></span></span>
     </span>
   </h3>
 
@@ -1044,7 +1238,7 @@ console.log(tlPoint.getPoint(angle)) // {x: 200, y: 50.00000000000001} This show
       <td data-ice="name" class="code" data-depth="0">pPoint</td>
       <td data-ice="type" class="code"><span>PositionalPoint</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"><p>The point that exists inside/outside the rectangle</p>
+      <td data-ice="description"><p>The point that exists inside/outside the rectangle.</p>
 </td>
     </tr>
 </tbody>

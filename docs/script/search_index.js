@@ -312,6 +312,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "es/icon-point.mjs~iconpoint#iconpoint",
+    "class/es/icon-point.mjs~IconPoint.html#instance-member-iconPoint",
+    "es/icon-point.mjs~IconPoint#iconPoint",
+    "member"
+  ],
+  [
     "es/icon-point.mjs~iconpoint#logger",
     "class/es/icon-point.mjs~IconPoint.html#instance-member-logger",
     "es/icon-point.mjs~IconPoint#logger",
@@ -330,15 +336,21 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
-    "es/icon-point.mjs~iconpoint#rawpixelspoint",
-    "class/es/icon-point.mjs~IconPoint.html#instance-member-rawPixelsPoint",
-    "es/icon-point.mjs~IconPoint#rawPixelsPoint",
-    "member"
-  ],
-  [
     "es/icon-point.mjs~iconpoint#setpoint",
     "class/es/icon-point.mjs~IconPoint.html#instance-method-setPoint",
     "es/icon-point.mjs~IconPoint#setPoint",
+    "method"
+  ],
+  [
+    "es/icon-point.mjs~iconpoint#updatebounds",
+    "class/es/icon-point.mjs~IconPoint.html#instance-method-updateBounds",
+    "es/icon-point.mjs~IconPoint#updateBounds",
+    "method"
+  ],
+  [
+    "es/icon-point.mjs~iconpoint#updatepoint",
+    "class/es/icon-point.mjs~IconPoint.html#instance-method-updatePoint",
+    "es/icon-point.mjs~IconPoint#updatePoint",
     "method"
   ],
   [
