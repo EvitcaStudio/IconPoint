@@ -8,7 +8,7 @@
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
   <script src="script/manual.js"></script>
-<meta name="description" content="A class that manager a point that exists inside/outside a virtual rectangle. The point&apos;s position inside/outside of the rectangle is maintained when the rectangle is rotated."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="IconPoint"><meta property="twitter:description" content="A class that manager a point that exists inside/outside a virtual rectangle. The point&apos;s position inside/outside of the rectangle is maintained when the rectangle is rotated."><meta property="twitter:image" content="./evitcastudio_round_branding.png"></head>
+<meta name="description" content="A class that manages a point that exists inside/outside a virtual rectangle. The point&apos;s position inside/outside of the rectangle is maintained when the rectangle is rotated."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="IconPoint"><meta property="twitter:description" content="A class that manages a point that exists inside/outside a virtual rectangle. The point&apos;s position inside/outside of the rectangle is maintained when the rectangle is rotated."><meta property="twitter:image" content="./evitcastudio_round_branding.png"></head>
 <body class="layout-container" data-ice="rootContainer">
 
 <header>
@@ -34,7 +34,7 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="iconpoint">IconPoint</h1><p>A class that manager a point that exists inside/outside a virtual rectangle. The point&apos;s position inside/outside of the rectangle is maintained when the rectangle is rotated.</p>
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="iconpoint">IconPoint</h1><p>A class that manages a point that exists inside/outside a virtual rectangle. The point&apos;s position inside/outside of the rectangle is maintained when the rectangle is rotated.</p>
 <h2 id="installation">Installation</h2><h3 id="es-module">ES Module</h3><pre><code class="lang-js"><code class="source-code prettyprint">import { IconPoint } from &apos;./icon-point.mjs&apos;;</code>
 </code></pre>
 <h3 id="iife--immediately-invoked-function-expression-">IIFE (Immediately Invoked Function Expression)</h3><pre><code class="lang-js"><code class="source-code prettyprint">&lt;script src=&quot;icon-point.js&quot;&gt;&lt;/script&gt;;
@@ -46,7 +46,7 @@ const rectangle = { x: 0, y: 0 };
 // Make the dimensions of the rectangle 100x50
 const bounds = { width: 100, height: 50 };
 // Create a point at the top left corner of the rectangle
-const point = { x: 1, y: 1, useRawPixels: true };
+const point = { x: 1, y: 1 };
 // Create an icon point that will track the point on this rectangle when it moves/rotates
 const tlPoint = new IconPoint(rectangle, bounds, point);
 

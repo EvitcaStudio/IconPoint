@@ -17,7 +17,7 @@
         "brand": {
           "logo": "./evitcastudio_round_branding.png",
           "title": "IconPoint",
-          "description": "A class that manager a point that exists inside/outside a virtual rectangle. The point's position inside/outside of the rectangle is maintained when the rectangle is rotated.",
+          "description": "A class that manages a point that exists inside/outside a virtual rectangle. The point's position inside/outside of the rectangle is maintained when the rectangle is rotated.",
           "repository": "https://github.com/EvitcaStudio/IconPoint",
           "author": "https://github.com/doubleactii",
           "image": "./evitcastudio_round_branding.png"
