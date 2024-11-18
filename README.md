@@ -1,5 +1,5 @@
 # IconPoint
-A class that manager a point that exists inside/outside a virtual rectangle. The point's position inside/outside of the rectangle is maintained when the rectangle is rotated.
+A class that manages a point that exists inside/outside a virtual rectangle. The point's position inside/outside of the rectangle is maintained when the rectangle is rotated.
 
 ## Installation
 
@@ -24,7 +24,7 @@ const rectangle = { x: 0, y: 0 };
 // Make the dimensions of the rectangle 100x50
 const bounds = { width: 100, height: 50 };
 // Create a point at the top left corner of the rectangle
-const point = { x: 1, y: 1, useRawPixels: true };
+const point = { x: 1, y: 1 };
 // Create an icon point that will track the point on this rectangle when it moves/rotates
 const tlPoint = new IconPoint(rectangle, bounds, point);
 
