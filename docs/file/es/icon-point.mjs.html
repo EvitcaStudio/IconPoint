@@ -37,19 +37,12 @@
 <div class="content" data-ice="content"><h1 data-ice="title">es/icon-point.mjs</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/*!
  * icon-point@1.1.0 https://github.com/EvitcaStudio/IconPoint
- * Compiled Mon, 18 Nov 2024 12:47:20 UTC
+ * Compiled Tue, 03 Dec 2024 02:09:23 UTC
  *
  * icon-point is licensed under the MIT License.
  * http://www.opensource.org/licenses/mit-license
  */
-/**
- * logger@1.0.0 git+https://github.com/EvitcaStudio/Logger
- * Compiled 1/9/2024, 7:19:18 AM UTC
- * 
- * logger is licensed under a MIT styled License. See LICENSE.md for more info.
- * 
- * Copyright 2024, Evitca Studio, All Rights Reserved
- */
+
 /**
  * The IconPoint class
  * A point that exists inside/outside a virtual rectangle. The point&apos;s position inside/outside of the rectangle is maintained when the rectangle is rotated.
@@ -75,12 +68,15 @@ class IconPoint {
     /**
      * The version of the module.
      */
-    version = &quot;1.1.0&quot;;
+    static version = &quot;1.1.0&quot;;
     /** The logger module this module uses to log errors / logs
      * @private
      * @type {Logger}
      */
-    logger;
+    static logger = new i({
+        type: &apos;Icon-Point-Module&apos;,
+        ansi: &apos;#ff6600&apos;
+    });
     /**
      * An object storing the position of the point that was set. This is the point on the rectangle.
      * It can be changed at runtime.
@@ -141,8 +137,6 @@ class IconPoint {
         this.bounds.height = height;
         this.positionalPoint = pPoint;
         this.setPoint(pIconPoint);
-        this.logger = new i();
-        this.logger.registerType(&apos;Icon-Point-Module&apos;, &apos;#ff6600&apos;);
     }
     /**
      * Gets the new point&apos;s position inside a rectangle after taking pAngle into account.

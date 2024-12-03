@@ -51,12 +51,15 @@ export class IconPoint {
 	/**
 	 * The version of the module.
 	 */
-	version = "VERSION_REPLACE_ME";
+	static version = "VERSION_REPLACE_ME";
     /** The logger module this module uses to log errors / logs
      * @private
      * @type {Logger}
      */
-    private logger: typeof Logger;
+    private static logger: typeof Logger = new Logger({
+        type: 'Icon-Point-Module',
+        ansi: '#ff6600'
+    });
     /**
      * An object storing the position of the point that was set. This is the point on the rectangle.  
      * It can be changed at runtime.
@@ -119,9 +122,6 @@ export class IconPoint {
         this.positionalPoint = pPoint;
 
         this.setPoint(pIconPoint);
-
-        this.logger = new Logger();
-        this.logger.registerType('Icon-Point-Module', '#ff6600');
     }
     /**
      * Gets the new point's position inside a rectangle after taking pAngle into account.
