@@ -37,7 +37,7 @@
 <div class="content" data-ice="content"><h1 data-ice="title">es/icon-point.mjs</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/*!
  * icon-point@1.1.0 https://github.com/EvitcaStudio/IconPoint
- * Compiled Tue, 03 Dec 2024 02:29:23 UTC
+ * Compiled Tue, 03 Dec 2024 03:11:33 UTC
  *
  * icon-point is licensed under the MIT License.
  * http://www.opensource.org/licenses/mit-license
@@ -236,6 +236,30 @@ class IconPoint {
         const { width, height } = pBounds;
         this.bounds.width = width;
         this.bounds.height = height;
+    }
+    /**
+     * Transforms the x point.
+     * @param {number} pTransformX - The x transform to transform the x point to.
+     */
+    transformX(pTransformX) {
+        const boundsX = Math.abs(pTransformX * this.bounds.width);
+        this.iconPoint.x = boundsX - this.originalPoint.x;
+    }
+    /**
+     * Transforms the y point.
+     * @param {number} pTransformY - The y transform to transform the y point to.
+     */
+    transformY(pTransformY) {
+        const boundsY = Math.abs(pTransformY * this.bounds.height);
+        this.iconPoint.y = boundsY - this.originalPoint.y;
+    }
+    /**
+     * Transforms the point.
+     * @param {Transform} pTransform - The transform to transform the point to.
+     */
+    transform(pTransform) {
+        this.transformX(pTransform.x);
+        this.transformY(pTransform.y);
     }
 }
 

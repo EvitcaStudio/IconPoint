@@ -348,6 +348,24 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "es/icon-point.mjs~iconpoint#transform",
+    "class/es/icon-point.mjs~IconPoint.html#instance-method-transform",
+    "es/icon-point.mjs~IconPoint#transform",
+    "method"
+  ],
+  [
+    "es/icon-point.mjs~iconpoint#transformx",
+    "class/es/icon-point.mjs~IconPoint.html#instance-method-transformX",
+    "es/icon-point.mjs~IconPoint#transformX",
+    "method"
+  ],
+  [
+    "es/icon-point.mjs~iconpoint#transformy",
+    "class/es/icon-point.mjs~IconPoint.html#instance-method-transformY",
+    "es/icon-point.mjs~IconPoint#transformY",
+    "method"
+  ],
+  [
     "es/icon-point.mjs~iconpoint#updatebounds",
     "class/es/icon-point.mjs~IconPoint.html#instance-method-updateBounds",
     "es/icon-point.mjs~IconPoint#updateBounds",
