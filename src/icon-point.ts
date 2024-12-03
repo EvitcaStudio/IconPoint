@@ -26,6 +26,11 @@ interface Anchor {
     y: number;
 }
 
+interface Transform {
+    x: number;
+    y: number;
+}
+
 /**
  * The IconPoint class  
  * A point that exists inside/outside a virtual rectangle. The point's position inside/outside of the rectangle is maintained when the rectangle is rotated.
@@ -222,5 +227,29 @@ export class IconPoint {
         const { width, height } = pBounds;
         this.bounds.width = width;
         this.bounds.height = height;
+    }
+    /**
+     * Transforms the x point.
+     * @param {number} pTransformX - The x transform to transform the x point to.
+     */
+    transformX(pTransformX: number): void {
+        const boundsX = Math.abs(pTransformX * this.bounds.width);
+        this.iconPoint.x = boundsX - this.originalPoint.x;
+    }
+    /**
+     * Transforms the y point.
+     * @param {number} pTransformY - The y transform to transform the y point to.
+     */
+    transformY(pTransformY: number): void {
+        const boundsY = Math.abs(pTransformY * this.bounds.height);
+        this.iconPoint.y = boundsY - this.originalPoint.y;
+    }
+    /**
+     * Transforms the point.
+     * @param {Transform} pTransform - The transform to transform the point to.
+     */
+    transform(pTransform: Transform): void {
+        this.transformX(pTransform.x);
+        this.transformY(pTransform.y);
     }
 }
