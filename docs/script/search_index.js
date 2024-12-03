@@ -318,12 +318,6 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
-    "es/icon-point.mjs~iconpoint#logger",
-    "class/es/icon-point.mjs~IconPoint.html#instance-member-logger",
-    "es/icon-point.mjs~IconPoint#logger",
-    "member"
-  ],
-  [
     "es/icon-point.mjs~iconpoint#point",
     "class/es/icon-point.mjs~IconPoint.html#instance-member-point",
     "es/icon-point.mjs~IconPoint#point",
@@ -354,12 +348,6 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
-    "es/icon-point.mjs~iconpoint#version",
-    "class/es/icon-point.mjs~IconPoint.html#instance-member-version",
-    "es/icon-point.mjs~IconPoint#version",
-    "member"
-  ],
-  [
     "es/icon-point.mjs~iconpoint.defaultanchor",
     "class/es/icon-point.mjs~IconPoint.html#static-member-defaultAnchor",
     "es/icon-point.mjs~IconPoint.defaultAnchor",
@@ -369,6 +357,18 @@ window.esdocSearchIndex = [
     "es/icon-point.mjs~iconpoint.defaultoffset",
     "class/es/icon-point.mjs~IconPoint.html#static-member-defaultOffset",
     "es/icon-point.mjs~IconPoint.defaultOffset",
+    "member"
+  ],
+  [
+    "es/icon-point.mjs~iconpoint.logger",
+    "class/es/icon-point.mjs~IconPoint.html#static-member-logger",
+    "es/icon-point.mjs~IconPoint.logger",
+    "member"
+  ],
+  [
+    "es/icon-point.mjs~iconpoint.version",
+    "class/es/icon-point.mjs~IconPoint.html#static-member-version",
+    "es/icon-point.mjs~IconPoint.version",
     "member"
   ]
 ]
