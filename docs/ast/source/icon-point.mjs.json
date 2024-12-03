@@ -518,10 +518,10 @@
                   }
                 },
                 "extra": {
-                  "rawValue": "1.1.0",
-                  "raw": "\"1.1.0\""
+                  "rawValue": "1.2.0",
+                  "raw": "\"1.2.0\""
                 },
-                "value": "1.1.0"
+                "value": "1.2.0"
               },
               "leadingComments": [
                 {
@@ -9627,10 +9627,10 @@
                     }
                   },
                   "extra": {
-                    "rawValue": "1.1.0",
-                    "raw": "\"1.1.0\""
+                    "rawValue": "1.2.0",
+                    "raw": "\"1.2.0\""
                   },
-                  "value": "1.1.0"
+                  "value": "1.2.0"
                 },
                 "leadingComments": [
                   {
@@ -18145,7 +18145,7 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "!\n * icon-point@1.1.0 https://github.com/EvitcaStudio/IconPoint\n * Compiled Tue, 03 Dec 2024 03:11:33 UTC\n *\n * icon-point is licensed under the MIT License.\n * http://www.opensource.org/licenses/mit-license\n ",
+              "value": "!\n * icon-point@1.2.0 https://github.com/EvitcaStudio/IconPoint\n * Compiled Tue, 03 Dec 2024 03:22:56 UTC\n *\n * icon-point is licensed under the MIT License.\n * http://www.opensource.org/licenses/mit-license\n ",
               "start": 0,
               "end": 213,
               "loc": {
@@ -18224,7 +18224,7 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "!\n * icon-point@1.1.0 https://github.com/EvitcaStudio/IconPoint\n * Compiled Tue, 03 Dec 2024 03:11:33 UTC\n *\n * icon-point is licensed under the MIT License.\n * http://www.opensource.org/licenses/mit-license\n ",
+      "value": "!\n * icon-point@1.2.0 https://github.com/EvitcaStudio/IconPoint\n * Compiled Tue, 03 Dec 2024 03:22:56 UTC\n *\n * icon-point is licensed under the MIT License.\n * http://www.opensource.org/licenses/mit-license\n ",
       "start": 0,
       "end": 213,
       "loc": {
@@ -18674,7 +18674,7 @@
   "tokens": [
     {
       "type": "CommentBlock",
-      "value": "!\n * icon-point@1.1.0 https://github.com/EvitcaStudio/IconPoint\n * Compiled Tue, 03 Dec 2024 03:11:33 UTC\n *\n * icon-point is licensed under the MIT License.\n * http://www.opensource.org/licenses/mit-license\n ",
+      "value": "!\n * icon-point@1.2.0 https://github.com/EvitcaStudio/IconPoint\n * Compiled Tue, 03 Dec 2024 03:22:56 UTC\n *\n * icon-point is licensed under the MIT License.\n * http://www.opensource.org/licenses/mit-license\n ",
       "start": 0,
       "end": 213,
       "loc": {
@@ -19601,7 +19601,7 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "1.1.0",
+      "value": "1.2.0",
       "start": 1263,
       "end": 1270,
       "loc": {
