@@ -37,12 +37,11 @@
 <div class="content" data-ice="content"><h1 data-ice="title">es/icon-point.mjs</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/*!
  * icon-point@1.1.0 https://github.com/EvitcaStudio/IconPoint
- * Compiled Tue, 03 Dec 2024 02:09:23 UTC
+ * Compiled Tue, 03 Dec 2024 02:29:23 UTC
  *
  * icon-point is licensed under the MIT License.
  * http://www.opensource.org/licenses/mit-license
  */
-
 /**
  * The IconPoint class
  * A point that exists inside/outside a virtual rectangle. The point&apos;s position inside/outside of the rectangle is maintained when the rectangle is rotated.
@@ -92,6 +91,13 @@ class IconPoint {
      */
     iconPoint = { x: 0, y: 0 };
     /**
+     * @private
+     * @type {Point}
+     * @prop {number} x - The raw x pixel position of this point
+     * @prop {number} y - The raw y pixel position of this point
+     */
+    originalPoint = { x: 0, y: 0 };
+    /**
      * An object storing the position of the rectangle.
      * @private
      * @type {Point}
@@ -136,6 +142,7 @@ class IconPoint {
         this.bounds.width = width;
         this.bounds.height = height;
         this.positionalPoint = pPoint;
+        this.originalPoint = { ...pIconPoint };
         this.setPoint(pIconPoint);
     }
     /**
@@ -214,6 +221,12 @@ class IconPoint {
         this.iconPoint.y = isNormalized ? y * this.bounds.height : y;
     }
     /**
+     * Resets the point to the original point.
+     */
+    resetPoint() {
+        this.setPoint(this.originalPoint);
+    }
+    /**
      * Updates the bounds of the rectangle this icon point exists inside/outside of.
      * @param {Bounds} pBounds - The bounds to update the rectangle with.
      * @prop {number} pBounds.width - The width of the new rectangle.
@@ -223,16 +236,6 @@ class IconPoint {
         const { width, height } = pBounds;
         this.bounds.width = width;
         this.bounds.height = height;
-    }
-    /**
-     * Changes the icon point position.
-     * @param {PositionalPoint} pPoint - The point to update this icon point with.
-     * @prop {number} pPoint.x - The x coordinate of the point inside/outside the rectangle.
-     * @prop {number} pPoint.y - The y coordinate of the point inside/outside the rectangle.
-     * @prop {boolean} [pPoint.isNormalized] - If the point&apos;s value is normalized.
-     */
-    updatePoint(pPoint) {
-        this.setPoint(pPoint);
     }
 }
 

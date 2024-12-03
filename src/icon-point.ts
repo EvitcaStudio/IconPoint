@@ -75,6 +75,13 @@ export class IconPoint {
      */
     iconPoint: Point = { x: 0, y: 0 };
     /**
+     * @private
+     * @type {Point}
+     * @prop {number} x - The raw x pixel position of this point
+     * @prop {number} y - The raw y pixel position of this point 
+     */
+    originalPoint: Point = { x: 0, y: 0 };
+    /**
      * An object storing the position of the rectangle.  
      * @private
      * @type {Point}
@@ -120,6 +127,7 @@ export class IconPoint {
         this.bounds.height = height;
 
         this.positionalPoint = pPoint;
+        this.originalPoint = { ...pIconPoint };
 
         this.setPoint(pIconPoint);
     }
@@ -199,6 +207,12 @@ export class IconPoint {
         this.iconPoint.y = isNormalized ? y * this.bounds.height : y;
     }
     /**
+     * Resets the point to the original point.
+     */
+    resetPoint() {
+        this.setPoint(this.originalPoint);
+    }
+    /**
      * Updates the bounds of the rectangle this icon point exists inside/outside of.
      * @param {Bounds} pBounds - The bounds to update the rectangle with.
      * @prop {number} pBounds.width - The width of the new rectangle.
@@ -208,15 +222,5 @@ export class IconPoint {
         const { width, height } = pBounds;
         this.bounds.width = width;
         this.bounds.height = height;
-    }
-    /**
-     * Changes the icon point position.
-     * @param {PositionalPoint} pPoint - The point to update this icon point with.
-     * @prop {number} pPoint.x - The x coordinate of the point inside/outside the rectangle. 
-     * @prop {number} pPoint.y - The y coordinate of the point inside/outside the rectangle. 
-     * @prop {boolean} [pPoint.isNormalized] - If the point's value is normalized. 
-     */
-    updatePoint(pPoint: PositionalPoint): void {
-        this.setPoint(pPoint);
     }
 }
