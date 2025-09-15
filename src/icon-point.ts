@@ -1,32 +1,33 @@
+// @ts-ignore
 import { Logger } from './vendor/logger.min.mjs';
 
-interface Point {
+export interface Point {
     x: number; 
     y: number; 
 }
 
-interface PositionalPoint {
+export interface PositionalPoint {
     x: number; 
     y: number; 
     isNormalized?: boolean;
 }
 
-interface Offset {
+export interface Offset {
     x: number;
     y: number;
 }
 
-interface Bounds {
+export interface Bounds {
     width: number; 
     height: number;
 }
 
-interface Anchor {
+export interface Anchor {
     x: number; 
     y: number;
 }
 
-interface Transform {
+export interface Transform {
     x: number;
     y: number;
 }
@@ -57,10 +58,7 @@ export class IconPoint {
 	 * The version of the module.
 	 */
 	static version = "VERSION_REPLACE_ME";
-    /** The logger module this module uses to log errors / logs
-     * @private
-     * @type {Logger}
-     */
+    /** The logger module this module uses to log errors / logs */
     private static logger: typeof Logger = new Logger({
         type: 'Icon-Point-Module',
         ansi: '#ff6600'
@@ -73,43 +71,24 @@ export class IconPoint {
      *  |   x   |  
      *  |       |  
      *  |_______|  
-     * @private
-     * @type {Point}
-     * @prop {number} x - The raw x pixel position of this point
-     * @prop {number} y - The raw y pixel position of this point 
      */
-    iconPoint: Point = { x: 0, y: 0 };
+    public iconPoint: Point = { x: 0, y: 0 };
     /**
-     * @private
-     * @type {Point}
-     * @prop {number} x - The raw x pixel position of this point
-     * @prop {number} y - The raw y pixel position of this point 
+     * The original point that was set when the IconPoint was created.
      */
-    originalPoint: Point = { x: 0, y: 0 };
+    private originalPoint: Point = { x: 0, y: 0 };
     /**
      * An object storing the position of the rectangle.  
-     * @private
-     * @type {Point}
-     * @prop {number} x - The x position of the rectangle.  
-     * @prop {number} y - The y position of the rectangle.  
      */
-    positionalPoint: Point;
+    private positionalPoint: Point;
     /**
      * An object storing the point's position with rotation taken into account.  
-     * @private
-     * @type {Point}
-     * @prop {number} x - The x position of the point after rotation is applied.  
-     * @prop {number} y - The y position of the point after rotation is applied.  
      */
-    point: Point = { x: 0, y: 0 };
+    private point: Point = { x: 0, y: 0 };
     /**
      * An object storing the rectangle's size.  
-     * @private
-     * @type {Bounds}
-     * @prop {number} width - The width of the rectangle.  
-     * @prop {number} height - The height of the rectangle.  
      */
-    bounds: Bounds = { width: 32, height: 32 };
+    private bounds: Bounds = { width: 32, height: 32 };
     /**
      * @param {Point} pPoint - The rectangle this icon point exists inside/outside of.   
      * @prop {number} pPoint.x - The x coordinate of the rectangle.  
@@ -200,13 +179,12 @@ export class IconPoint {
     }
     /**
      * Sets the static point and defines the raw pixels value
-     * @private
      * @param {PositionalPoint} pPoint - The point that exists inside/outside the rectangle.  
      * @prop {number} pPoint.x - The x coordinate of the point inside/outside the rectangle. 
      * @prop {number} pPoint.y - The y coordinate of the point inside/outside the rectangle. 
      * @prop {boolean} [pPoint.isNormalized] - If the point's value is normalized. 
      */
-    setPoint(pPoint: PositionalPoint): void {
+    private setPoint(pPoint: PositionalPoint): void {
         const { x, y, isNormalized } = pPoint;
         this.iconPoint.x = isNormalized ? x * this.bounds.width : x;
         this.iconPoint.y = isNormalized ? y * this.bounds.height : y;

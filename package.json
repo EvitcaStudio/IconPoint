@@ -1,38 +1,32 @@
 {
   "name": "icon-point",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "author": "https://github.com/doubleactii",
   "repository": {
     "type": "git",
     "url": "https://github.com/EvitcaStudio/IconPoint"
   },
-  "module": "src/icon-point.ts",
+  "main": "dist/esm/icon-point.js",
+  "module": "dist/esm/icon-point.js",
+  "types": "dist/icon-point.d.ts",
+  "files": [
+    "dist/**/*",
+    "docs/**/*"
+  ],
   "devDependencies": {
-    "@rollup/plugin-babel": "^6.0.4",
-    "@rollup/plugin-terser": "^0.4.4",
     "@types/bun": "latest",
-    "bun": "^1.1.38",
-    "esdoc": "^1.1.0",
-    "esdoc-ecmascript-proposal-plugin": "^1.0.0",
-    "esdoc-standard-plugin": "^1.0.0",
-    "rollup-plugin-cleandir": "^3.0.0",
-    "rollup-plugin-replace": "^2.2.0"
-  },
-  "peerDependencies": {
+    "bun": "^1.2.22",
+    "chalk": "^5.6.2",
+    "typedoc": "^0.26.0",
     "typescript": "^5.6.3"
   },
   "description": "A class that manages a point that exists inside/outside a virtual rectangle. The point's position inside/outside of the rectangle is maintained when the rectangle is rotated.",
   "keywords": ["point", "vylo", "vylocity", "evitcastudio"],
   "license": "MIT",
   "scripts": {
-    "build:rollup": "npx rollup -c",
-    "build:docs": "esdoc -c esdoc.json",
-    "build:dist": "npm run build:rollup && npm run build:docs"
+    "build": "bun run bun-build.ts && npx tsc --declaration --emitDeclarationOnly --declarationMap false --sourceMap false",
+    "build:docs": "typedoc",
+    "build:dist": "bun run build && bun run build:docs"
   },
-  "type": "module",
-  "dependencies": {
-    "@rollup/plugin-node-resolve": "^15.3.0",
-    "rollup": "^4.27.2",
-    "rollup-plugin-typescript2": "^0.36.0"
-  }
+  "type": "module"
 }
