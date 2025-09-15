@@ -24,7 +24,7 @@ const startTime = Date.now();
 await Promise.all([
     // ES Module version
     Bun.build({
-        entrypoints: ['./src/icon-point.ts'],
+        entrypoints: ['./src/index.ts'],
         outdir: './dist/esm/',
         naming: `${packageJson.name}.js`,
         banner: banner,
@@ -36,7 +36,7 @@ await Promise.all([
     }),
     // ES Module minified version
     Bun.build({
-        entrypoints: ['./src/icon-point.ts'],
+        entrypoints: ['./src/index.ts'],
         outdir: './dist/min/',
         naming: `${packageJson.name}.min.js`,
         minify: true,
@@ -48,7 +48,7 @@ await Promise.all([
     }),
     // IIFE version
     Bun.build({
-        entrypoints: ['./src/icon-point.ts'],
+        entrypoints: ['./src/index.ts'],
         outdir: './dist/iife/',
         naming: `${packageJson.name}-iife.js`,
         format: 'iife',
@@ -60,7 +60,7 @@ await Promise.all([
     }),
     // IIFE minified version
     Bun.build({
-        entrypoints: ['./src/icon-point.ts'],
+        entrypoints: ['./src/index.ts'],
         outdir: './dist/iife/',
         naming: `${packageJson.name}-iife.min.js`,
         format: 'iife',
