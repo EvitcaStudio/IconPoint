@@ -31,6 +31,13 @@ export interface Transform {
     y: number;
 }
 
+export interface IconPointExport {
+    bounds: Bounds;
+    originalPoint: Point;
+    iconPoint: PositionalPoint;
+    id: string;
+}
+
 /**
  * The IconPoint class.
  * A point that exists inside/outside a virtual rectangle. The point's position inside/outside of the rectangle is maintained when the rectangle is rotated.
@@ -240,5 +247,18 @@ export class IconPoint {
      */
     public getId(): string {
         return this.id;
+    }
+
+    /**
+     * Exports the icon point data.
+     * @returns - The exported icon point data.
+     */
+    public export(): IconPointExport {
+        return {
+            bounds: this.bounds,
+            iconPoint: this.originalPoint,
+            originalPoint: this.positionalPoint,
+            id: this.id
+        };
     }
 }
