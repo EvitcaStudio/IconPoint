@@ -32,8 +32,10 @@ export interface Transform {
 }
 
 export interface IconPointExport {
-    bounds: Bounds;
-    iconPoint: PositionalPoint;
+    width: number;
+    height: number;
+    x: number;
+    y: number;
     id: string;
 }
 
@@ -286,8 +288,8 @@ export class IconPoint {
      */
     public export(): IconPointExport {
         return {
-            bounds: this.bounds,
-            iconPoint: this.originalPoint,
+            ...this.bounds,
+            ...this.iconPoint,
             id: this.id
         };
     }
