@@ -25,8 +25,8 @@ await Promise.all([
     // ES Module version
     Bun.build({
         entrypoints: ['./src/index.ts'],
-        outdir: './dist/esm/',
-        naming: `${packageJson.name}.js`,
+        outdir: './dist/',
+        naming: `index.js`,
         banner: banner,
         target: 'browser',
         splitting: false,
@@ -38,7 +38,7 @@ await Promise.all([
     Bun.build({
         entrypoints: ['./src/index.ts'],
         outdir: './dist/min/',
-        naming: `${packageJson.name}.min.js`,
+        naming: `index.min.js`,
         minify: true,
         banner: banner,
         target: 'browser',
@@ -50,7 +50,7 @@ await Promise.all([
     Bun.build({
         entrypoints: ['./src/index.ts'],
         outdir: './dist/iife/',
-        naming: `${packageJson.name}-iife.js`,
+        naming: `${packageJson.name}.js`,
         format: 'iife',
         minify: false,
         banner: banner,
@@ -62,7 +62,7 @@ await Promise.all([
     Bun.build({
         entrypoints: ['./src/index.ts'],
         outdir: './dist/iife/',
-        naming: `${packageJson.name}-iife.min.js`,
+        naming: `${packageJson.name}.min.js`,
         format: 'iife',
         minify: true,
         banner: banner,
@@ -74,10 +74,10 @@ await Promise.all([
 
 // Replace VERSION_REPLACE_ME with actual version in all generated files
 const filesToUpdate = [
-    `dist/esm/${packageJson.name}.js`,
-    `dist/min/${packageJson.name}.min.js`,
-    `dist/iife/${packageJson.name}-iife.js`,
-    `dist/iife/${packageJson.name}-iife.min.js`
+    `dist/index.js`,
+    `dist/min/index.min.js`,
+    `dist/iife/${packageJson.name}.js`,
+    `dist/iife/${packageJson.name}.min.js`
 ];
 
 for (const file of filesToUpdate) {
@@ -89,7 +89,6 @@ for (const file of filesToUpdate) {
         // File might not exist, that's okay
     }
 }
-
 
 const elapsed = Date.now() - startTime;
 logMessage('info', `Build completed in ${elapsed}ms`);

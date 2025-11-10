@@ -6,13 +6,13 @@ A class that manages a point that exists inside/outside a virtual rectangle. The
 ### ES Module
 
 ```js
-import { IconPoint } from './icon-point.mjs';
+import { IconPoint } from './icon-point';
 ```
 
 ### IIFE (Immediately Invoked Function Expression)
 
 ```js
-<script src="icon-point.js"></script>;
+<script src="./icon-point.js"></script>;
 // ...
 window.IconPointBundle.IconPoint;
 ```

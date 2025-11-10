@@ -1,5 +1,5 @@
 {
-  "entryPoints": ["src/icon-point.ts"],
+  "entryPoints": ["src/index.ts"],
   "out": "docs",
   "name": "IconPoint",
   "readme": "README.md",
