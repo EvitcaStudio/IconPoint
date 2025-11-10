@@ -33,7 +33,6 @@ export interface Transform {
 
 export interface IconPointExport {
     bounds: Bounds;
-    originalPoint: Point;
     iconPoint: PositionalPoint;
     id: string;
 }
@@ -185,6 +184,38 @@ export class IconPoint {
         this.point.y = y;
         return this.point;
     }
+
+    /**
+     * Gets the new point's position inside a rectangle from an external point after taking pAngle into account.
+     * @param pExternalPoint - The external point to calculate from.
+     * @param pAngle - Rotation of the rectangle this point exists inside/outside of in radians.
+     * @param pOffset - The offset of the rectangle. Defaults to `IconPoint.defaultOffset`.
+     * @param pAnchor - The anchor origin of the rectangle. Defaults to `IconPoint.defaultAnchor`.
+     * @returns - The point inside/outside of the rectangle after rotating, or void.
+     */
+    public getPointFromExternalPoint(pExternalPoint: Point, pAngle: number=0, pOffset: Offset = IconPoint.defaultOffset, pAnchor: Anchor = IconPoint.defaultAnchor): Point | void {
+        // cx, cy - center of square coordinates 
+        // x, y - coordinates of a corner point of the square
+        // angle is the angle of rotation
+        const cx = (pExternalPoint.x + pOffset.x) + this.bounds.width * pAnchor.x;
+        const cy = (pExternalPoint.y + pOffset.y) + this.bounds.height * pAnchor.y;
+        // We take away 1 from the position of the rectangle because we don't want to point to start inside the boundaries of the rectangle
+        // Otherwise we would have to use 0 to (rectangle.xy-1) for the points coordinates
+        const pointX = (pExternalPoint.x + pOffset.x - 1) + this.iconPoint.x;
+        const pointY = (pExternalPoint.y + pOffset.y - 1) + this.iconPoint.y;
+        // translate point to origin
+        const tempX = pointX - cx;
+        const tempY = pointY - cy;
+        // now apply rotation
+        const rotatedX = tempX * Math.cos(pAngle) - tempY * -Math.sin(pAngle);
+        const rotatedY = tempX * -Math.sin(pAngle) + tempY * Math.cos(pAngle);
+        // translate back
+        const x = rotatedX + cx;
+        const y = rotatedY + cy;
+        this.point.x = x;
+        this.point.y = y;
+        return this.point;
+    }
     
     /**
      * Sets the static point and defines the raw pixels value
@@ -257,7 +288,6 @@ export class IconPoint {
         return {
             bounds: this.bounds,
             iconPoint: this.originalPoint,
-            originalPoint: this.positionalPoint,
             id: this.id
         };
     }
